@@ -1,0 +1,148 @@
+{
+  "groupID": "rotation-mechanics",
+  "version": 1,
+  "lastUpdated": "2026-02-28T16:00:00Z",
+  "topics": [
+    {
+      "id": "club-rotation-center",
+      "title": "Understanding Club Rotation",
+      "subtitle": "Where the center of rotation lives during the swing",
+      "iconName": "circle.dotted",
+      "defaultPrompt": "I see the clubhead move on an arc, but help me understand the center of rotation of the club. During the different phases of the swing, where is the club's rotation center relative to my hands? Should I feel the center of rotation in my hands, or is it outside the hands?",
+      "promptTemplate": "Help me understand the center of rotation of the club during the golf swing. During the different phases of the swing, where is the club's rotation center relative to my hands? {{skill_level_context}} {{swing_phase_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "Use simple analogies — I don't have a physics background." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "I understand lever systems and can visualize rotation points." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Include biomechanical detail — moment of inertia, instantaneous center of rotation, and force couples." }
+          ]
+        },
+        {
+          "id": "swing_phase",
+          "type": "dropdown",
+          "label": "Swing Phase",
+          "templateVariable": "swing_phase_context",
+          "defaultValue": "full",
+          "options": [
+            { "value": "full", "label": "Full Swing", "promptFragment": "Cover the full swing from takeaway through follow-through." },
+            { "value": "backswing", "label": "Backswing", "promptFragment": "Focus on the backswing — how the rotation center shifts during the takeaway and loading phase." },
+            { "value": "transition", "label": "Transition & Downswing", "promptFragment": "Focus on the transition and downswing — where the rotation center moves as the club shallows and accelerates." },
+            { "value": "impact", "label": "Impact Zone", "promptFragment": "Focus on the impact zone — what happens to the rotation center through the hitting area." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick Answer", "promptFragment": "Give me a concise mental model I can use." },
+            { "value": "detailed", "label": "Detailed Explanation", "promptFragment": "Provide a thorough explanation with diagrams described in words." },
+            { "value": "feel", "label": "Feels & Drills", "promptFragment": "Describe what the correct rotation should feel like and give me drills to develop awareness." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "shaft-length-rotation",
+      "title": "Shaft Length & Rotation Differences",
+      "subtitle": "How club length changes the rotation dynamics",
+      "iconName": "ruler",
+      "defaultPrompt": "Help me understand how the length of the shaft and lie angle affect where the instantaneous center of rotation is. Is it the same for every club, or does a driver rotate differently than a wedge?",
+      "promptTemplate": "Help me understand how shaft length and lie angle affect the instantaneous center of rotation of the golf club. {{skill_level_context}} {{club_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "Keep it simple — explain why my driver swing feels different from my wedge swing." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "I understand that different clubs require different swings. Explain the physics behind why." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Include moment of inertia differences, swing weight effects, and how CG location interacts with shaft length." }
+          ]
+        },
+        {
+          "id": "club_comparison",
+          "type": "dropdown",
+          "label": "Club Comparison",
+          "templateVariable": "club_context",
+          "defaultValue": "all",
+          "options": [
+            { "value": "all", "label": "All Clubs", "promptFragment": "Compare across the full bag from driver to lob wedge." },
+            { "value": "driver_vs_iron", "label": "Driver vs Iron", "promptFragment": "Focus on the difference between driver and mid-iron rotation." },
+            { "value": "long_vs_short", "label": "Long vs Short Irons", "promptFragment": "Focus on how rotation changes from long irons to short irons." },
+            { "value": "wedges", "label": "Wedge Variations", "promptFragment": "Focus on how different wedge lengths and bounces affect rotation." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick Answer", "promptFragment": "Give me the key takeaways in a few sentences." },
+            { "value": "detailed", "label": "Detailed Explanation", "promptFragment": "Provide a thorough physics-based explanation." },
+            { "value": "practical", "label": "Practical Application", "promptFragment": "Focus on how I should adjust my swing feel and setup for different clubs based on these differences." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "body-rotation-sequence",
+      "title": "Body Rotation Sequence",
+      "subtitle": "The kinetic chain from ground to clubhead",
+      "iconName": "figure.golf",
+      "defaultPrompt": "Walk me through the proper body rotation sequence in the golf swing. How should the hips, torso, shoulders, and arms fire in sequence to maximize power and consistency?",
+      "promptTemplate": "Walk me through the proper body rotation sequence in the golf swing — the kinetic chain from ground to clubhead. {{skill_level_context}} {{focus_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "I'm new to thinking about body rotation — use simple language and analogies." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "I understand hip-shoulder separation and the general sequence. Go deeper." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Include ground reaction forces, pelvic thrust mechanics, and X-factor stretch data." }
+          ]
+        },
+        {
+          "id": "focus_area",
+          "type": "dropdown",
+          "label": "Focus Area",
+          "templateVariable": "focus_context",
+          "defaultValue": "full_sequence",
+          "options": [
+            { "value": "full_sequence", "label": "Full Sequence", "promptFragment": "Cover the complete kinetic chain from feet through clubhead." },
+            { "value": "hips", "label": "Hip Rotation", "promptFragment": "Focus specifically on hip rotation — timing, amount, and common faults." },
+            { "value": "separation", "label": "Hip-Shoulder Separation", "promptFragment": "Focus on the separation between hips and shoulders and how to create and use the X-factor." },
+            { "value": "arms_hands", "label": "Arms & Hands", "promptFragment": "Focus on how the arms and hands fit into the rotation sequence — when to be passive versus active." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick Answer", "promptFragment": "Give me the sequence as a simple checklist." },
+            { "value": "detailed", "label": "Detailed Explanation", "promptFragment": "Provide a thorough explanation with timing cues." },
+            { "value": "drills", "label": "Drills & Feels", "promptFragment": "Give me specific drills and feel descriptions for each part of the sequence." }
+          ]
+        }
+      ]
+    }
+  ]
+}

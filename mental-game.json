@@ -1,0 +1,148 @@
+{
+  "groupID": "mental-game",
+  "version": 1,
+  "lastUpdated": "2026-02-28T16:00:00Z",
+  "topics": [
+    {
+      "id": "pre-shot-routine",
+      "title": "Building a Pre-Shot Routine",
+      "subtitle": "Consistent setup for consistent results",
+      "iconName": "checklist",
+      "defaultPrompt": "Help me build an effective pre-shot routine. I know the pros all have one, but I'm not sure what mine should include or how long it should take.",
+      "promptTemplate": "Help me build an effective pre-shot routine that promotes consistency and confidence. {{skill_level_context}} {{shot_type_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "I don't have a pre-shot routine yet — help me build one from scratch." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "I have a basic routine but it breaks down under pressure or when I'm playing poorly." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "I have an established routine but want to refine it for competitive play." }
+          ]
+        },
+        {
+          "id": "shot_type",
+          "type": "dropdown",
+          "label": "Shot Type",
+          "templateVariable": "shot_type_context",
+          "defaultValue": "full_shots",
+          "options": [
+            { "value": "full_shots", "label": "Full Shots", "promptFragment": "Focus on the pre-shot routine for full shots off the tee and fairway." },
+            { "value": "short_game", "label": "Short Game", "promptFragment": "Focus on the pre-shot routine for chips, pitches, and bunker shots." },
+            { "value": "putting", "label": "Putting", "promptFragment": "Focus on the pre-putt routine — read, practice strokes, and commitment." },
+            { "value": "all", "label": "All Shot Types", "promptFragment": "Cover how the routine should adapt for full shots, short game, and putting." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick Framework", "promptFragment": "Give me a simple framework I can start using next round." },
+            { "value": "detailed", "label": "Detailed Breakdown", "promptFragment": "Break down each element of an effective routine and explain why it matters." },
+            { "value": "examples", "label": "Tour Pro Examples", "promptFragment": "Include examples of what specific tour pros do in their routines and why it works." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pressure-management",
+      "title": "Playing Under Pressure",
+      "subtitle": "Staying focused when the round matters",
+      "iconName": "bolt.heart",
+      "defaultPrompt": "How do I handle pressure and nerves on the golf course? I tend to tighten up on important shots, and my swing changes when I'm nervous.",
+      "promptTemplate": "How do I handle pressure and nerves on the golf course? My swing changes when I'm nervous. {{skill_level_context}} {{situation_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "I get nervous on almost every shot, especially with people watching." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "I'm generally OK but tighten up on key shots — first tee, closing holes, short putts." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "I compete regularly and need tournament-level mental strategies." }
+          ]
+        },
+        {
+          "id": "situation",
+          "type": "dropdown",
+          "label": "Pressure Situation",
+          "templateVariable": "situation_context",
+          "defaultValue": "general",
+          "options": [
+            { "value": "general", "label": "General Pressure", "promptFragment": "Cover general strategies for managing nerves and pressure." },
+            { "value": "first_tee", "label": "First Tee Jitters", "promptFragment": "Focus specifically on overcoming first tee anxiety." },
+            { "value": "closing", "label": "Closing Out a Round", "promptFragment": "Focus on staying composed when trying to close out a good round or match." },
+            { "value": "recovery", "label": "After a Bad Hole", "promptFragment": "Focus on mental recovery after a blow-up hole — how to reset and not let it snowball." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick Tips", "promptFragment": "Give me 3-4 techniques I can use immediately on the course." },
+            { "value": "detailed", "label": "Deep Dive", "promptFragment": "Explain the psychology behind pressure and provide a comprehensive toolkit." },
+            { "value": "exercises", "label": "Mental Exercises", "promptFragment": "Include specific breathing exercises, visualization techniques, and mental rehearsal strategies." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "course-management",
+      "title": "Smart Course Management",
+      "subtitle": "Playing strategically to lower your scores",
+      "iconName": "map",
+      "defaultPrompt": "Help me think more strategically on the golf course. I feel like I lose shots to poor decisions rather than poor swings. How should I be picking targets and managing risk?",
+      "promptTemplate": "Help me think more strategically on the golf course. I lose shots to poor decisions — how should I pick targets and manage risk? {{skill_level_context}} {{course_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "I mostly just aim at the flag and hope for the best. Help me think smarter." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "I understand basic strategy but don't have a consistent decision-making framework." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "I want to think like a caddy — strokes gained approach, miss patterns, and situational strategy." }
+          ]
+        },
+        {
+          "id": "course_situation",
+          "type": "dropdown",
+          "label": "Focus Area",
+          "templateVariable": "course_context",
+          "defaultValue": "overall",
+          "options": [
+            { "value": "overall", "label": "Overall Strategy", "promptFragment": "Cover a general framework for on-course decision making." },
+            { "value": "tee_shots", "label": "Tee Shot Strategy", "promptFragment": "Focus on tee shot strategy — when to hit driver, when to lay back, and how to pick targets." },
+            { "value": "approach", "label": "Approach Shots", "promptFragment": "Focus on approach shot strategy — which side of the green to miss on, when to be aggressive versus conservative." },
+            { "value": "scoring", "label": "Scoring Zone (< 100 yds)", "promptFragment": "Focus on strategy inside 100 yards — maximizing up-and-down percentage and avoiding big numbers." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick Rules", "promptFragment": "Give me simple rules of thumb for better decision making." },
+            { "value": "detailed", "label": "Full Framework", "promptFragment": "Lay out a complete course management framework with examples." },
+            { "value": "scenarios", "label": "Scenario Walkthroughs", "promptFragment": "Walk me through specific scenarios so I can learn the decision-making process." }
+          ]
+        }
+      ]
+    }
+  ]
+}

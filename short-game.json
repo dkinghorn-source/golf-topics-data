@@ -1,0 +1,148 @@
+{
+  "groupID": "short-game",
+  "version": 1,
+  "lastUpdated": "2026-02-28T16:00:00Z",
+  "topics": [
+    {
+      "id": "chip-vs-pitch",
+      "title": "Chipping vs Pitching",
+      "subtitle": "When to chip low and when to pitch it high",
+      "iconName": "arrow.up.right",
+      "defaultPrompt": "Help me understand the difference between a chip shot and a pitch shot. When should I use each one, and how does the technique differ?",
+      "promptTemplate": "Help me understand the difference between a chip shot and a pitch shot. When should I use each, and how does the technique differ? {{skill_level_context}} {{situation_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "I'm still learning the basics around the green. Keep it simple." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "I can hit both shots but I'm not sure when to choose which." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "I want to develop a complete short game decision framework with shot shaping." }
+          ]
+        },
+        {
+          "id": "situation",
+          "type": "dropdown",
+          "label": "Lie / Situation",
+          "templateVariable": "situation_context",
+          "defaultValue": "general",
+          "options": [
+            { "value": "general", "label": "General Overview", "promptFragment": "" },
+            { "value": "tight_lie", "label": "Tight Lie", "promptFragment": "Focus on shots from a tight or bare lie where there's not much grass under the ball." },
+            { "value": "rough", "label": "Greenside Rough", "promptFragment": "Focus on shots from thick greenside rough where the ball is sitting down." },
+            { "value": "uphill_downhill", "label": "Uphill / Downhill", "promptFragment": "Focus on how to adjust chip and pitch selection on uphill and downhill lies." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick Rules", "promptFragment": "Give me simple rules of thumb I can use on the course." },
+            { "value": "detailed", "label": "Detailed Explanation", "promptFragment": "Explain the full technique difference and decision-making process." },
+            { "value": "drills", "label": "Practice Drills", "promptFragment": "Include practice drills I can use to improve both shots." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "distance-control-wedges",
+      "title": "Wedge Distance Control",
+      "subtitle": "Dialing in your scoring club distances",
+      "iconName": "target",
+      "defaultPrompt": "How do I develop reliable distance control with my wedges? I struggle with the in-between yardages where I need less than a full swing.",
+      "promptTemplate": "How do I develop reliable distance control with my wedges, especially on less-than-full shots? {{skill_level_context}} {{method_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "I don't have a system yet — I'm just guessing at partial swing distances." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "I have a general sense of my wedge distances but lack precision inside 100 yards." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "I have a distance chart but want to refine my system for tournament-level precision." }
+          ]
+        },
+        {
+          "id": "method",
+          "type": "dropdown",
+          "label": "System Preference",
+          "templateVariable": "method_context",
+          "defaultValue": "any",
+          "options": [
+            { "value": "any", "label": "Open to Any Method", "promptFragment": "Recommend the best approach for building a wedge distance system." },
+            { "value": "clock", "label": "Clock System", "promptFragment": "Focus on the clock system (9 o'clock, 10 o'clock, full) for controlling backswing length." },
+            { "value": "pelz", "label": "Dave Pelz System", "promptFragment": "Focus on the Dave Pelz 4-wedge, 3-distance system." },
+            { "value": "feel", "label": "Feel-Based", "promptFragment": "Focus on developing touch and feel rather than a mechanical system." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "drills",
+          "options": [
+            { "value": "quick", "label": "Quick Tips", "promptFragment": "Give me a few key concepts I can start using today." },
+            { "value": "detailed", "label": "Full System", "promptFragment": "Lay out a complete distance control system I can build over time." },
+            { "value": "drills", "label": "Practice Plan", "promptFragment": "Give me a structured practice plan to build my wedge distance chart." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bunker-basics",
+      "title": "Greenside Bunker Play",
+      "subtitle": "Getting out of the sand consistently",
+      "iconName": "circle.bottomhalf.filled",
+      "defaultPrompt": "Help me understand the technique for greenside bunker shots. I struggle with consistency — sometimes I leave it in the bunker, sometimes I blade it over the green.",
+      "promptTemplate": "Help me understand proper greenside bunker technique. I struggle with consistency — sometimes I leave it in the sand, sometimes I blade it over the green. {{skill_level_context}} {{sand_type_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "I dread bunker shots — just help me get out consistently." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "I can get out most of the time but lack distance control and spin." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "I want to learn to control trajectory, spin, and landing spot from the sand." }
+          ]
+        },
+        {
+          "id": "sand_type",
+          "type": "dropdown",
+          "label": "Sand Condition",
+          "templateVariable": "sand_type_context",
+          "defaultValue": "normal",
+          "options": [
+            { "value": "normal", "label": "Normal Sand", "promptFragment": "" },
+            { "value": "firm", "label": "Firm / Wet Sand", "promptFragment": "Focus on adjustments for firm or wet compacted sand." },
+            { "value": "soft", "label": "Soft / Fluffy Sand", "promptFragment": "Focus on adjustments for soft, fluffy, or deep sand." },
+            { "value": "plugged", "label": "Plugged Lie", "promptFragment": "Focus on how to escape a plugged or fried-egg lie in the bunker." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick Keys", "promptFragment": "Give me 3-4 key fundamentals to focus on." },
+            { "value": "detailed", "label": "Full Technique", "promptFragment": "Walk me through the complete setup and swing technique." },
+            { "value": "drills", "label": "Practice Drills", "promptFragment": "Include drills I can do at a practice bunker to build confidence." }
+          ]
+        }
+      ]
+    }
+  ]
+}

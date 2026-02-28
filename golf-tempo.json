@@ -1,0 +1,134 @@
+{
+  "groupID": "golf-tempo",
+  "version": 1,
+  "lastUpdated": "2026-02-28T16:00:00Z",
+  "topics": [
+    {
+      "id": "tempo-full-vs-short",
+      "title": "Full Swing vs Short Game Tempo",
+      "subtitle": "How tempo changes between full irons and pitch shots",
+      "iconName": "timer",
+      "defaultPrompt": "I want to understand the differences between what a good tempo is for a full iron swing versus a pitch shot. How should the ratio and overall speed change?",
+      "promptTemplate": "I want to understand the differences between what a good tempo is for a full iron swing versus a pitch shot. {{skill_level_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "I'm fairly new to golf, so keep the explanation simple and practical." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "I understand basic swing mechanics and the concept of backswing-to-downswing ratio." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "I'm comfortable with biomechanics — include specific timing values and tour player data." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick Answer", "promptFragment": "Give me a concise answer I can take to the range." },
+            { "value": "detailed", "label": "Detailed Explanation", "promptFragment": "Provide a thorough explanation with examples." },
+            { "value": "drills", "label": "Drills & Practice", "promptFragment": "Include specific drills I can practice to feel the difference." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tempo-tour-benchmarks",
+      "title": "Tour Player Tempo Benchmarks",
+      "subtitle": "How your tempo compares to the pros",
+      "iconName": "chart.bar.fill",
+      "defaultPrompt": "How much variance is there in full iron swing tempo among tour players? I'm trying to understand my own swing tempo and want to know if it's in a good range compared to professional players.",
+      "promptTemplate": "How much variance is there in full iron swing tempo among tour players? {{skill_level_context}} {{club_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "I'm new to thinking about tempo — explain what the numbers mean." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "I understand tempo ratios like 3:1 and want to know where I should target." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "I track my tempo with launch monitor data. Give me specific ranges and statistical variance." }
+          ]
+        },
+        {
+          "id": "club_type",
+          "type": "dropdown",
+          "label": "Club Focus",
+          "templateVariable": "club_context",
+          "defaultValue": "all",
+          "options": [
+            { "value": "all", "label": "All Clubs", "promptFragment": "" },
+            { "value": "driver", "label": "Driver", "promptFragment": "Focus specifically on driver tempo benchmarks." },
+            { "value": "irons", "label": "Irons", "promptFragment": "Focus specifically on iron tempo benchmarks (mid and short irons)." },
+            { "value": "wedges", "label": "Wedges", "promptFragment": "Focus specifically on wedge tempo for scoring shots." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick Answer", "promptFragment": "Give me the key numbers and a quick summary." },
+            { "value": "detailed", "label": "Detailed Explanation", "promptFragment": "Provide a thorough breakdown with context about what the numbers mean." },
+            { "value": "drills", "label": "Drills & Practice", "promptFragment": "Include drills to help me find and groove my ideal tempo." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tempo-consistency",
+      "title": "Building Tempo Consistency",
+      "subtitle": "Drills and strategies for repeatable timing",
+      "iconName": "repeat",
+      "defaultPrompt": "What are the best ways to build a consistent, repeatable tempo in my golf swing? I find that my tempo changes from shot to shot, especially under pressure.",
+      "promptTemplate": "What are the best ways to build a consistent, repeatable tempo in my golf swing? I find that my tempo changes from shot to shot, especially under pressure. {{skill_level_context}} {{practice_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "I'm still building my swing — keep suggestions simple and foundational." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "I have a consistent swing shape but my tempo varies day to day." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "My mechanics are solid but I lose tempo under tournament pressure." }
+          ]
+        },
+        {
+          "id": "practice_setting",
+          "type": "dropdown",
+          "label": "Practice Setting",
+          "templateVariable": "practice_context",
+          "defaultValue": "range",
+          "options": [
+            { "value": "range", "label": "Driving Range", "promptFragment": "Give me drills I can do at the driving range." },
+            { "value": "home", "label": "At Home", "promptFragment": "Give me drills I can do at home without hitting balls." },
+            { "value": "course", "label": "On Course", "promptFragment": "Give me strategies I can use during an actual round." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "drills",
+          "options": [
+            { "value": "quick", "label": "Quick Tips", "promptFragment": "Give me 3-5 quick tips I can use immediately." },
+            { "value": "detailed", "label": "Detailed Explanation", "promptFragment": "Explain the science behind tempo consistency and how to train it." },
+            { "value": "drills", "label": "Drill Program", "promptFragment": "Give me a structured practice plan with specific drills and progressions." }
+          ]
+        }
+      ]
+    }
+  ]
+}
