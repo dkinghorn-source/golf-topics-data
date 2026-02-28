@@ -1,0 +1,148 @@
+{
+  "groupID": "weather",
+  "version": 1,
+  "lastUpdated": "2026-02-28T17:30:00Z",
+  "topics": [
+    {
+      "id": "playing-in-wind",
+      "title": "Playing in the Wind",
+      "subtitle": "Club selection, ball flight, and strategy adjustments",
+      "iconName": "wind",
+      "defaultPrompt": "How should I adjust my game when playing in the wind? I struggle with club selection, keeping the ball low, and judging how much the wind will move the ball.",
+      "promptTemplate": "How should I adjust my game when playing in the wind? I struggle with club selection, trajectory control, and judging wind effect on the ball. {{skill_level_context}} {{wind_type_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "I'm new to playing in wind — give me simple survival strategies." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "I can flight the ball somewhat but lack a consistent wind strategy." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "I want detailed shot-shaping strategies — knockdowns, holds, rides — with specific swing adjustments." }
+          ]
+        },
+        {
+          "id": "wind_type",
+          "type": "dropdown",
+          "label": "Wind Direction",
+          "templateVariable": "wind_type_context",
+          "defaultValue": "all",
+          "options": [
+            { "value": "all", "label": "All Directions", "promptFragment": "" },
+            { "value": "headwind", "label": "Into the Wind", "promptFragment": "Focus on playing into a headwind — how to keep the ball low and manage distance loss." },
+            { "value": "downwind", "label": "Downwind", "promptFragment": "Focus on playing downwind — how to use it for distance while maintaining control." },
+            { "value": "crosswind", "label": "Crosswind", "promptFragment": "Focus on crosswinds — when to aim and hold versus shape into the wind." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick Tips", "promptFragment": "Give me 4-5 quick rules I can use on the course today." },
+            { "value": "detailed", "label": "Detailed Explanation", "promptFragment": "Explain the physics of wind on ball flight and provide a complete strategy guide." },
+            { "value": "drills", "label": "Practice Shots", "promptFragment": "Include specific shots to practice — knockdown, punch, low runner — with setup and swing keys." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rain-wet-conditions",
+      "title": "Playing in the Rain",
+      "subtitle": "Equipment, technique, and scoring in wet conditions",
+      "iconName": "cloud.rain",
+      "defaultPrompt": "How do I adapt my game when playing in the rain? My grips get slippery, I lose distance, and I can't spin the ball the same. What adjustments should I make?",
+      "promptTemplate": "How do I adapt my game when playing in the rain? I lose grip, distance, and spin control. What adjustments should I make? {{skill_level_context}} {{focus_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "I'm not sure what to do differently in the rain — cover the basics." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "I know to keep grips dry but want a full wet-weather game plan." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "I play tournaments rain or shine — give me competitive strategies for managing wet conditions." }
+          ]
+        },
+        {
+          "id": "focus_area",
+          "type": "dropdown",
+          "label": "Focus Area",
+          "templateVariable": "focus_context",
+          "defaultValue": "overall",
+          "options": [
+            { "value": "overall", "label": "Overall Game", "promptFragment": "Cover adjustments across the full game — driving, irons, short game, and putting." },
+            { "value": "equipment", "label": "Equipment & Prep", "promptFragment": "Focus on equipment preparation — gloves, towels, rain gear, club selection, and keeping grips dry." },
+            { "value": "technique", "label": "Swing Adjustments", "promptFragment": "Focus on swing and technique changes — how wet conditions affect contact, spin, and ball flight." },
+            { "value": "scoring", "label": "Scoring Strategy", "promptFragment": "Focus on course management and scoring strategy — how to adjust targets and expectations in the rain." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick Checklist", "promptFragment": "Give me a pre-round rain checklist and key rules to follow." },
+            { "value": "detailed", "label": "Detailed Guide", "promptFragment": "Provide a comprehensive wet-weather guide covering preparation through post-round." },
+            { "value": "mental", "label": "Mindset & Attitude", "promptFragment": "Include mental game strategies for staying positive and focused when conditions are miserable." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "temperature-humidity-distance",
+      "title": "Temperature & Humidity Effects on Distance",
+      "subtitle": "How air density changes your carry and total yardage",
+      "iconName": "thermometer.medium",
+      "defaultPrompt": "Help me understand how temperature and humidity affect my golf ball distance. TrackMan data shows that air density — driven by temperature, humidity, and altitude — directly changes carry distance. Cold dry air is denser and reduces carry, while hot humid air is thinner and increases it. I want to understand the actual yardage differences so I can club properly. How many yards do I gain or lose per 10-degree temperature change? Does humidity really make the ball go farther, and by how much? How do temperature and humidity combine with altitude?",
+      "promptTemplate": "Explain how temperature and humidity affect golf ball carry distance and total distance. TrackMan measures air density from temperature, humidity, and barometric pressure, and uses it to calculate ball flight. Cold dense air creates more drag and reduces carry; hot humid air is less dense and increases carry. {{skill_level_context}} {{condition_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "Keep the physics simple — just tell me the practical yardage adjustments for different conditions." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "I understand that conditions affect distance. Give me the numbers — yards gained or lost per temperature and humidity change — so I can adjust my club selection." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Include the aerodynamics — how air density affects drag coefficient and Magnus force on a spinning golf ball. Reference TrackMan's normalized vs. raw distance data and explain when normalization matters for practice vs. on-course decisions." }
+          ]
+        },
+        {
+          "id": "condition_focus",
+          "type": "dropdown",
+          "label": "Condition Focus",
+          "templateVariable": "condition_context",
+          "defaultValue": "combined",
+          "options": [
+            { "value": "combined", "label": "Temperature + Humidity Combined", "promptFragment": "Explain how temperature and humidity work together. For example, compare a 95°F day at 80% humidity versus a 45°F day at 20% humidity — what's the total distance difference for a 7-iron and a driver?" },
+            { "value": "temperature", "label": "Temperature Only", "promptFragment": "Focus on temperature alone. How many yards of carry does a typical golfer gain or lose per 10°F (or 5°C) change? Give specific examples: a 7-iron that carries 160 yards at 70°F — what does it carry at 50°F and 90°F?" },
+            { "value": "humidity", "label": "Humidity Only", "promptFragment": "Focus on humidity. Most golfers think humid air is heavier, but water vapor is actually lighter than dry air. Explain this counterintuitive physics and quantify the real distance effect — is it 1-2 yards or more significant?" },
+            { "value": "altitude", "label": "Altitude + Temperature + Humidity", "promptFragment": "Cover the full picture: altitude, temperature, and humidity together. How do they compound? Compare sea level at 70°F to Denver (5,280 ft) at 90°F with high humidity — total yardage swing for a driver and a 7-iron." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick Reference Chart", "promptFragment": "Give me a simple reference chart: temperature ranges, humidity levels, and the approximate yards to add or subtract for a driver and a 7-iron." },
+            { "value": "detailed", "label": "Detailed Explanation", "promptFragment": "Explain the science behind air density effects on ball flight, with specific TrackMan-style numbers for carry distance changes across a range of conditions." },
+            { "value": "on_course", "label": "On-Course Strategy", "promptFragment": "Focus on practical on-course decision making: how to check conditions, estimate the combined effect, and adjust club selection. Include rules of thumb I can use without a calculator." }
+          ]
+        }
+      ]
+    }
+  ]
+}

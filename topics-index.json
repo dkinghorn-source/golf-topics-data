@@ -41,6 +41,16 @@
       "topicCount": 3,
       "sortOrder": 3,
       "fileName": "mental-game.json"
+    },
+    {
+      "id": "weather",
+      "title": "Playing the Weather",
+      "subtitle": "Adapting your game to wind, rain, and temperature",
+      "iconName": "cloud.sun.fill",
+      "color": "teal",
+      "topicCount": 3,
+      "sortOrder": 4,
+      "fileName": "weather.json"
     }
   ]
 }
