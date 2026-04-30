@@ -1,0 +1,343 @@
+{
+  "groupID": "kinematic-swing-sequence",
+  "version": 1,
+  "lastUpdated": "2026-04-30T12:00:00Z",
+  "topics": [
+    {
+      "id": "ks-fundamentals",
+      "title": "What Kinematic Sequence Actually Is",
+      "subtitle": "The 4-segment chain from pelvis to clubhead",
+      "iconName": "point.3.connected.trianglepath.dotted",
+      "defaultPrompt": "Explain what kinematic sequence is in a golf swing. Walk me through the four segments — pelvis, thorax, lead arm, and club — and why they need to fire in that order.",
+      "promptTemplate": "Explain what kinematic sequence is in a golf swing. Walk me through the four segments — pelvis, thorax, lead arm, and club — and why they need to fire in that order. {{skill_level_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "I'm new to this concept — use simple analogies like cracking a whip and avoid jargon." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "I understand hip-shoulder separation and basic swing mechanics — go a level deeper." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Include peak angular velocities, proximal-to-distal energy transfer, and what TPI / TrackMan data shows about elite sequencing." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick Answer", "promptFragment": "Give me a concise mental model in a few sentences." },
+            { "value": "detailed", "label": "Detailed Explanation", "promptFragment": "Provide a thorough explanation with each segment's role described in order." },
+            { "value": "feel", "label": "Feels & Cues", "promptFragment": "Translate it into what each phase should feel like in my body." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tour-vs-amateur-sequence",
+      "title": "Tour Pro vs Amateur Sequence",
+      "subtitle": "What the data actually shows about elite sequencing",
+      "iconName": "person.2.fill",
+      "defaultPrompt": "Compare how tour pros sequence their swing versus typical amateurs. What does the data show is actually different — is it the order, the timing, the magnitudes, or all three?",
+      "promptTemplate": "Compare how tour pros sequence their swing versus typical amateurs. What does the data show is actually different — order, timing, peak velocities, or deceleration patterns? {{skill_level_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "Keep the data discussion simple — focus on the takeaways I can actually use." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "I follow swing data conversations — feel free to reference specific metrics." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Include published research, typical peak angular velocities by segment, and the timing gaps between peaks measured in milliseconds." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick Answer", "promptFragment": "Give me the 2 or 3 biggest differences in a short list." },
+            { "value": "detailed", "label": "Detailed Explanation", "promptFragment": "Walk through each segment and how the elite pattern differs from what amateurs typically do." },
+            { "value": "actionable", "label": "What To Work On", "promptFragment": "End with the highest-leverage thing an amateur should work on first to move toward the elite pattern." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "free-speed-sequence",
+      "title": "Free Speed Through Better Sequence",
+      "subtitle": "Same effort, more clubhead — without working harder",
+      "iconName": "bolt.fill",
+      "defaultPrompt": "How much clubhead speed am I leaving on the table with poor kinematic sequencing? Explain how better sequence translates to more speed without me having to swing harder.",
+      "promptTemplate": "Explain how better kinematic sequence translates to more clubhead speed without swinging harder. How much speed is realistically gained by improving sequencing? {{skill_level_context}} {{club_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "Keep it simple — I want to understand the concept and what it means for my distance." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "I understand swing speed conversations — explain the physics in golfer-friendly language." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Include angular momentum transfer, summation of speed principle, and typical mph gains seen in research when sequencing is corrected." }
+          ]
+        },
+        {
+          "id": "club_type",
+          "type": "dropdown",
+          "label": "Club",
+          "templateVariable": "club_context",
+          "defaultValue": "all",
+          "options": [
+            { "value": "all", "label": "All Clubs", "promptFragment": "" },
+            { "value": "driver", "label": "Driver", "promptFragment": "Focus on driver speed gains — this is where I want more distance off the tee." },
+            { "value": "irons", "label": "Irons", "promptFragment": "Focus on iron play — how sequencing affects compression, distance, and consistency." },
+            { "value": "wedges", "label": "Wedges", "promptFragment": "Focus on wedge play — how sequencing affects spin, control, and trajectory." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick Answer", "promptFragment": "Give me the bottom-line speed gain potential and the biggest lever to get it." },
+            { "value": "detailed", "label": "Detailed Explanation", "promptFragment": "Walk me through how each segment contributes to clubhead speed when sequenced well." },
+            { "value": "drills", "label": "Drills & Practice", "promptFragment": "Give me specific drills to find free speed through better sequencing." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pelvis-led-transition",
+      "title": "Pelvis-Led Transition",
+      "subtitle": "The single highest-leverage feel in the downswing",
+      "iconName": "arrow.turn.down.right",
+      "defaultPrompt": "Help me understand and feel a pelvis-led transition. How do I start the downswing with my hips before my upper body fires, and what does it actually feel like when I'm doing it right?",
+      "promptTemplate": "Help me understand and feel a pelvis-led transition — starting the downswing with the hips before the upper body. {{skill_level_context}} {{focus_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "I'm new to thinking about transition — use simple feels and avoid jargon." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "I understand hip-shoulder separation in concept — help me actually feel it." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Include ground reaction forces, lead leg push, and the timing window between top of backswing and pelvis peak velocity." }
+          ]
+        },
+        {
+          "id": "focus_area",
+          "type": "dropdown",
+          "label": "Focus",
+          "templateVariable": "focus_context",
+          "defaultValue": "feels",
+          "options": [
+            { "value": "feels", "label": "What It Feels Like", "promptFragment": "Focus on the sensations — what I should feel in my hips, lead leg, and upper body." },
+            { "value": "mechanics", "label": "What's Happening", "promptFragment": "Focus on the mechanics — what's actually moving and in what order." },
+            { "value": "checkpoints", "label": "Checkpoints", "promptFragment": "Give me concrete checkpoints I can verify on video — pelvis position at top, at P5, at impact." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick Answer", "promptFragment": "Give me the one or two cues that matter most." },
+            { "value": "detailed", "label": "Detailed Explanation", "promptFragment": "Provide a thorough breakdown with feels, mechanics, and common pitfalls." },
+            { "value": "drills", "label": "Drills & Cues", "promptFragment": "Give me specific drills and swing thoughts to ingrain the feel." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "common-sequencing-faults",
+      "title": "Common Sequencing Faults",
+      "subtitle": "Arms-first, casting, over-the-top — all KS failures",
+      "iconName": "exclamationmark.triangle.fill",
+      "defaultPrompt": "Walk me through the most common kinematic sequencing faults amateurs make. How does each one show up in the swing, what causes it, and what's the typical fix?",
+      "promptTemplate": "Walk me through the most common kinematic sequencing faults — what causes them, how they show up, and how to fix them. {{skill_level_context}} {{fault_focus_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "Keep the diagnosis simple and focus on what I can actually feel and fix." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "I understand basic swing faults — connect them to the underlying sequencing problem." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Include the biomechanics of each fault and how it shows up in segment velocity profiles." }
+          ]
+        },
+        {
+          "id": "fault_focus",
+          "type": "dropdown",
+          "label": "Fault Focus",
+          "templateVariable": "fault_focus_context",
+          "defaultValue": "all",
+          "options": [
+            { "value": "all", "label": "All Common Faults", "promptFragment": "Cover the full set — casting, over-the-top, early extension, hip stall, and arms-first." },
+            { "value": "casting", "label": "Casting / Early Release", "promptFragment": "Focus on casting — arms and club firing before the body unwinds." },
+            { "value": "over_top", "label": "Over-the-Top", "promptFragment": "Focus on the over-the-top move and how it stems from a sequencing failure." },
+            { "value": "early_extension", "label": "Early Extension", "promptFragment": "Focus on early extension — how loss of posture disrupts the sequence." },
+            { "value": "hip_stall", "label": "Hip Stall", "promptFragment": "Focus on hip stall — when the pelvis decelerates too early or never accelerates enough." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick Answer", "promptFragment": "Give me the symptom, root cause, and one-sentence fix for each." },
+            { "value": "detailed", "label": "Detailed Explanation", "promptFragment": "For each fault: how it looks on video, what causes it sequence-wise, and the corrective approach." },
+            { "value": "drills", "label": "Drills & Fixes", "promptFragment": "Skip theory and give me drills that target each fault directly." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stall-and-release",
+      "title": "Stall and Release",
+      "subtitle": "Why segments must slow down to fire the next one",
+      "iconName": "pause.circle.fill",
+      "defaultPrompt": "Explain the role of deceleration in kinematic sequence. Why does each segment — pelvis, thorax, lead arm — need to slow down for the next one to fire properly?",
+      "promptTemplate": "Explain the role of deceleration in kinematic sequence — why each segment must slow down for energy to transfer up the chain. {{skill_level_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "Use a simple analogy like a whip or a chain — I don't need physics terminology." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "I follow the chain concept — explain why deceleration is what actually transfers energy." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Include conservation of angular momentum, kinetic link principle, and how deceleration of the proximal segment accelerates the distal segment." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick Answer", "promptFragment": "Give me the core idea in a few sentences with one good analogy." },
+            { "value": "detailed", "label": "Detailed Explanation", "promptFragment": "Walk through each segment's deceleration and how it fires the next link in the chain." },
+            { "value": "feel", "label": "Feels & Cues", "promptFragment": "Translate it into what stall-and-release should feel like during the downswing." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sequence-by-club",
+      "title": "Sequence by Club",
+      "subtitle": "Does kinematic sequence change driver to wedge?",
+      "iconName": "rectangle.stack.fill",
+      "defaultPrompt": "Does my kinematic sequence change with different clubs? Should the sequence I use with my driver be the same as my 7-iron and my wedge, or do they each have their own pattern?",
+      "promptTemplate": "Does kinematic sequence change across different clubs? Should the same sequence apply to driver, irons, and wedges, or are there meaningful differences? {{skill_level_context}} {{club_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "Keep it simple — should I think about my swing differently across clubs or not?" },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "I understand swing variation across clubs — go into the sequencing specifics." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Include data on how peak velocities and timing windows shift between driver, mid-iron, and wedge." }
+          ]
+        },
+        {
+          "id": "club_comparison",
+          "type": "dropdown",
+          "label": "Club Comparison",
+          "templateVariable": "club_context",
+          "defaultValue": "all",
+          "options": [
+            { "value": "all", "label": "Across the Bag", "promptFragment": "" },
+            { "value": "driver_vs_iron", "label": "Driver vs Iron", "promptFragment": "Focus on driver versus mid-iron sequencing differences." },
+            { "value": "iron_vs_wedge", "label": "Iron vs Wedge", "promptFragment": "Focus on iron versus wedge sequencing — partial swings change the picture." },
+            { "value": "partial_wedges", "label": "Partial Wedges", "promptFragment": "Focus on partial wedge shots — how sequence simplifies and what stays the same." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick Answer", "promptFragment": "Give me the bottom line — same sequence or not, and the one or two things that change." },
+            { "value": "detailed", "label": "Detailed Explanation", "promptFragment": "Walk through what stays the same and what changes across clubs and why." },
+            { "value": "practical", "label": "Practical Application", "promptFragment": "Tell me how to think about and feel my sequence differently across clubs in real practice." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "drills-build-sequence",
+      "title": "Drills That Build Sequence",
+      "subtitle": "Pump, step, pause, and towel drills for KS",
+      "iconName": "play.circle.fill",
+      "defaultPrompt": "Give me drills to build a better kinematic sequence. I want practice work I can do at the range and at home that ingrains the right firing order from pelvis to clubhead.",
+      "promptTemplate": "Give me drills to build a better kinematic sequence — practice work that ingrains the right firing order from pelvis to clubhead. {{skill_level_context}} {{drill_setting_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "Start with the simplest drills — I want easy, foundational work." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "I've done basic drills before — give me progression-level work." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Give me advanced drills with overspeed elements, asymmetric loading, and specific feedback cues." }
+          ]
+        },
+        {
+          "id": "drill_setting",
+          "type": "dropdown",
+          "label": "Where",
+          "templateVariable": "drill_setting_context",
+          "defaultValue": "range",
+          "options": [
+            { "value": "range", "label": "At the Range", "promptFragment": "Focus on drills I can do at the range with real golf balls." },
+            { "value": "home", "label": "At Home", "promptFragment": "Focus on drills I can do at home without hitting a ball — slow motion, mirror work, and feel drills." },
+            { "value": "both", "label": "Range + Home", "promptFragment": "Give me a balanced mix of range drills and at-home work I can do daily." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick List", "promptFragment": "Give me a short list of the highest-leverage drills with one-sentence descriptions." },
+            { "value": "detailed", "label": "Detailed Drills", "promptFragment": "For each drill: setup, execution, what it teaches, and how to know I'm doing it right." },
+            { "value": "program", "label": "Practice Program", "promptFragment": "Build me a 2 to 3 week practice program with daily drill assignments." }
+          ]
+        }
+      ]
+    }
+  ]
+}

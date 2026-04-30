@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "lastUpdated": "2026-02-28T16:00:00Z",
+  "lastUpdated": "2026-04-30T12:00:00Z",
   "groups": [
     {
       "id": "golf-tempo",
@@ -51,6 +51,16 @@
       "topicCount": 3,
       "sortOrder": 4,
       "fileName": "weather.json"
+    },
+    {
+      "id": "kinematic-swing-sequence",
+      "title": "Kinematic Swing Sequence",
+      "subtitle": "Timing the chain from pelvis to clubhead",
+      "iconName": "speedometer",
+      "color": "red",
+      "topicCount": 8,
+      "sortOrder": 5,
+      "fileName": "kinematic-swing-sequence.json"
     }
   ]
 }
