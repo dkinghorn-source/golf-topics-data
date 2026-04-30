@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "lastUpdated": "2026-04-30T12:00:00Z",
+  "lastUpdated": "2026-04-30T13:00:00Z",
   "groups": [
     {
       "id": "golf-tempo",
@@ -18,7 +18,7 @@
       "subtitle": "How body and club rotations drive the swing",
       "iconName": "arrow.triangle.2.circlepath",
       "color": "orange",
-      "topicCount": 3,
+      "topicCount": 7,
       "sortOrder": 1,
       "fileName": "rotation-mechanics.json"
     },

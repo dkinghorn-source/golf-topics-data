@@ -1,7 +1,7 @@
 {
   "groupID": "rotation-mechanics",
   "version": 1,
-  "lastUpdated": "2026-02-28T16:00:00Z",
+  "lastUpdated": "2026-04-30T13:00:00Z",
   "topics": [
     {
       "id": "club-rotation-center",
@@ -140,6 +140,169 @@
             { "value": "quick", "label": "Quick Answer", "promptFragment": "Give me the sequence as a simple checklist." },
             { "value": "detailed", "label": "Detailed Explanation", "promptFragment": "Provide a thorough explanation with timing cues." },
             { "value": "drills", "label": "Drills & Feels", "promptFragment": "Give me specific drills and feel descriptions for each part of the sequence." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "center-of-rotation-fundamentals",
+      "title": "What Is a Center of Rotation",
+      "subtitle": "The fundamental concept and why it matters in golf",
+      "iconName": "target",
+      "defaultPrompt": "Explain what a center of rotation is in physics, then translate it to the golf swing. Why does it matter where my club, arms, and body rotate around — and why does that center move during the swing?",
+      "promptTemplate": "Explain what a center of rotation is — first as a physics concept, then applied to the golf swing. Why does it matter where my club, arms, and body rotate around, and why does that center move during the swing? {{skill_level_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "I'm new to physics — use a simple analogy like a door swinging on a hinge or a wheel on an axle." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "I understand pivots and lever systems — go deeper into how the rotation center shifts during the swing." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Include the formal concept of the instantaneous center of rotation, why a rigid body's ICR can move, and how that applies to coupled multi-segment systems like the golf swing." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick Answer", "promptFragment": "Give me a concise mental model in a few sentences." },
+            { "value": "detailed", "label": "Detailed Explanation", "promptFragment": "Walk through the concept clearly, with examples from the golf swing." },
+            { "value": "feel", "label": "Feels & Cues", "promptFragment": "Translate the concept into what I should feel and look for during my own swing." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "arms-center-of-rotation",
+      "title": "The Arms' Center of Rotation",
+      "subtitle": "Where the arm system pivots through the swing",
+      "iconName": "figure.arms.open",
+      "defaultPrompt": "Where do my arms actually rotate around during the swing? Is it my sternum, the top of my spine, my lead shoulder socket, or something else? And does that center move from takeaway through follow-through?",
+      "promptTemplate": "Help me understand where my arm system pivots during the swing — sternum, top of spine, lead shoulder socket, or something compound. Does that center shift through the swing phases? {{skill_level_context}} {{swing_phase_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "Keep it simple — I want to know what the arms swing around so I can feel it." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "I understand the arms-and-shoulders triangle — explain the rotation center mechanically." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Include shoulder-girdle mechanics, glenohumeral vs scapulothoracic rotation, and how the arm system ICR couples with the torso ICR." }
+          ]
+        },
+        {
+          "id": "swing_phase",
+          "type": "dropdown",
+          "label": "Swing Phase",
+          "templateVariable": "swing_phase_context",
+          "defaultValue": "full",
+          "options": [
+            { "value": "full", "label": "Full Swing", "promptFragment": "Cover the full swing from takeaway through follow-through." },
+            { "value": "backswing", "label": "Backswing", "promptFragment": "Focus on the backswing — where the arms rotate around as they swing back and up." },
+            { "value": "transition", "label": "Transition & Downswing", "promptFragment": "Focus on the transition and downswing — how the arms' rotation center shifts as the club drops into the slot." },
+            { "value": "impact", "label": "Impact Zone", "promptFragment": "Focus on the impact zone — where the arms are pivoting through the hitting area and into early follow-through." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick Answer", "promptFragment": "Give me the key idea I can use as a swing thought." },
+            { "value": "detailed", "label": "Detailed Explanation", "promptFragment": "Walk through what's pivoting around what at each phase." },
+            { "value": "feel", "label": "Feels & Drills", "promptFragment": "Tell me what the correct arm pivot should feel like and give me drills to find it." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "wrist-forearm-rotation",
+      "title": "Wrist Hinge & Forearm Rotation",
+      "subtitle": "The small rotations that square the face at impact",
+      "iconName": "hand.raised.fill",
+      "defaultPrompt": "Walk me through how my wrists and forearms rotate during the swing. How does wrist hinge interact with forearm supination and pronation, and how do those small rotations square the clubface at impact?",
+      "promptTemplate": "Walk me through how the wrists hinge and the forearms rotate during the swing — and how those small rotations interact to square the clubface at impact. {{skill_level_context}} {{focus_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "Keep it simple — I just want to understand what my hands and forearms should be doing through impact." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "I know terms like supination, pronation, and bowed/cupped lead wrist — explain the mechanics." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Include radial/ulnar deviation, lead wrist flexion vs extension at impact, club face vs path interaction, and the kinematic role of forearm rotation in clubhead speed." }
+          ]
+        },
+        {
+          "id": "focus_area",
+          "type": "dropdown",
+          "label": "Focus",
+          "templateVariable": "focus_context",
+          "defaultValue": "all",
+          "options": [
+            { "value": "all", "label": "Full Picture", "promptFragment": "Cover wrist hinge, forearm rotation, and how they combine through impact." },
+            { "value": "wrist_hinge", "label": "Wrist Hinge", "promptFragment": "Focus on the wrist hinge — when it sets, when it holds, when it releases." },
+            { "value": "forearm_rotation", "label": "Forearm Rotation", "promptFragment": "Focus on forearm supination and pronation — when each forearm rotates and what role each plays." },
+            { "value": "face_square", "label": "Squaring the Face", "promptFragment": "Focus specifically on how wrist and forearm motion combine to square the clubface at impact." },
+            { "value": "release_patterns", "label": "Release Patterns", "promptFragment": "Focus on different release patterns — full roll, hold-off, bowed lead wrist — and what each produces." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick Answer", "promptFragment": "Give me the bottom line — what should my wrists and forearms be doing through impact." },
+            { "value": "detailed", "label": "Detailed Explanation", "promptFragment": "Walk through wrist and forearm motion phase by phase with mechanics." },
+            { "value": "drills", "label": "Drills & Cues", "promptFragment": "Give me specific drills and feel cues to ingrain the right wrist and forearm action." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "two-lever-system",
+      "title": "The Two-Lever System",
+      "subtitle": "Hogan's model for body and club working together",
+      "iconName": "link",
+      "defaultPrompt": "Explain the two-lever system in the golf swing — the body lever and the arm-club lever as Ben Hogan described it. How do they work together, and why is this such a useful mental model for understanding the swing?",
+      "promptTemplate": "Explain the two-lever system in the golf swing — the body lever and the arm-club lever — as a mental model for understanding rotation and power. {{skill_level_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "Use simple analogies — I'm new to thinking about the swing as a lever system." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "I'm familiar with Hogan's writing and the basic concept — go deeper into how the levers actually interact." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Include the double pendulum model, lag generation through the lever release sequence, and how modern biomechanics validates or refines the classic two-lever picture." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick Answer", "promptFragment": "Give me the model in a few sentences with the key takeaway." },
+            { "value": "detailed", "label": "Detailed Explanation", "promptFragment": "Walk me through both levers, how they connect, and how they release through impact." },
+            { "value": "feel", "label": "Feels & Application", "promptFragment": "Translate the model into what each lever should feel like during the swing and how to use the concept on the range." }
           ]
         }
       ]
