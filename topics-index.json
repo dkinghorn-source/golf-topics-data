@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "lastUpdated": "2026-04-30T13:00:00Z",
+  "lastUpdated": "2026-05-01T12:00:00Z",
   "groups": [
     {
       "id": "golf-tempo",
@@ -38,7 +38,7 @@
       "subtitle": "Focus, confidence, and course management",
       "iconName": "brain.head.profile",
       "color": "purple",
-      "topicCount": 3,
+      "topicCount": 7,
       "sortOrder": 3,
       "fileName": "mental-game.json"
     },
@@ -61,6 +61,146 @@
       "topicCount": 8,
       "sortOrder": 5,
       "fileName": "kinematic-swing-sequence.json"
+    },
+    {
+      "id": "putting",
+      "title": "Putting",
+      "subtitle": "Stroke, reading greens, and making more putts",
+      "iconName": "scope",
+      "color": "cyan",
+      "topicCount": 7,
+      "sortOrder": 6,
+      "fileName": "putting.json"
+    },
+    {
+      "id": "fault-diagnosis",
+      "title": "Fault Diagnosis",
+      "subtitle": "Why your shot did what it did — and how to fix it",
+      "iconName": "stethoscope",
+      "color": "pink",
+      "topicCount": 7,
+      "sortOrder": 7,
+      "fileName": "fault-diagnosis.json"
+    },
+    {
+      "id": "swing-positions",
+      "title": "Swing Positions",
+      "subtitle": "What to look for at each P-position",
+      "iconName": "checklist",
+      "color": "indigo",
+      "topicCount": 8,
+      "sortOrder": 8,
+      "fileName": "swing-positions.json"
+    },
+    {
+      "id": "strokes-gained",
+      "title": "Strokes Gained",
+      "subtitle": "The data framework that changed golf analysis",
+      "iconName": "chart.line.uptrend.xyaxis",
+      "color": "mint",
+      "topicCount": 7,
+      "sortOrder": 9,
+      "fileName": "strokes-gained.json"
+    },
+    {
+      "id": "speed-training",
+      "title": "Speed Training",
+      "subtitle": "Adding swing speed without losing your swing",
+      "iconName": "hare.fill",
+      "color": "yellow",
+      "topicCount": 7,
+      "sortOrder": 10,
+      "fileName": "speed-training.json"
+    },
+    {
+      "id": "ball-flight-laws",
+      "title": "Ball Flight Laws",
+      "subtitle": "Path, face, spin loft, and what they really mean",
+      "iconName": "arrow.up.forward",
+      "color": "brown",
+      "topicCount": 7,
+      "sortOrder": 11,
+      "fileName": "ball-flight-laws.json"
+    },
+    {
+      "id": "setup-preshot",
+      "title": "Setup & Pre-Shot",
+      "subtitle": "Stance, ball position, grip, and routine",
+      "iconName": "list.bullet.clipboard.fill",
+      "color": "gray",
+      "topicCount": 7,
+      "sortOrder": 12,
+      "fileName": "setup-preshot.json"
+    },
+    {
+      "id": "practice-improvement",
+      "title": "Practice & Improvement",
+      "subtitle": "Practice quality over practice quantity",
+      "iconName": "dumbbell.fill",
+      "color": "blue",
+      "topicCount": 6,
+      "sortOrder": 13,
+      "fileName": "practice-improvement.json"
+    },
+    {
+      "id": "course-management",
+      "title": "Course Management",
+      "subtitle": "Playing smarter, scoring lower",
+      "iconName": "map.fill",
+      "color": "green",
+      "topicCount": 7,
+      "sortOrder": 14,
+      "fileName": "course-management.json"
+    },
+    {
+      "id": "specialty-shots",
+      "title": "Specialty Shots",
+      "subtitle": "Bunkers, slopes, punches, and trouble lies",
+      "iconName": "flag.2.crossed.fill",
+      "color": "orange",
+      "topicCount": 7,
+      "sortOrder": 15,
+      "fileName": "specialty-shots.json"
+    },
+    {
+      "id": "equipment-fitting",
+      "title": "Equipment & Fitting",
+      "subtitle": "Driver, irons, wedges, balls, and shafts",
+      "iconName": "wrench.and.screwdriver.fill",
+      "color": "purple",
+      "topicCount": 6,
+      "sortOrder": 16,
+      "fileName": "equipment-fitting.json"
+    },
+    {
+      "id": "body-fitness",
+      "title": "Body & Fitness",
+      "subtitle": "Mobility, strength, and injury prevention",
+      "iconName": "figure.strengthtraining.traditional",
+      "color": "red",
+      "topicCount": 6,
+      "sortOrder": 17,
+      "fileName": "body-fitness.json"
+    },
+    {
+      "id": "drills-library",
+      "title": "Drills Library",
+      "subtitle": "The most effective drills, organized by purpose",
+      "iconName": "repeat.circle.fill",
+      "color": "teal",
+      "topicCount": 7,
+      "sortOrder": 18,
+      "fileName": "drills-library.json"
+    },
+    {
+      "id": "scoring-tiers",
+      "title": "Scoring Tiers",
+      "subtitle": "Climbing from bogey golf to scratch",
+      "iconName": "trophy.fill",
+      "color": "mint",
+      "topicCount": 6,
+      "sortOrder": 19,
+      "fileName": "scoring-tiers.json"
     }
   ]
 }

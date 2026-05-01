@@ -1,0 +1,259 @@
+{
+  "groupID": "strokes-gained",
+  "version": 1,
+  "lastUpdated": "2026-05-01T12:00:00Z",
+  "topics": [
+    {
+      "id": "what-is-strokes-gained",
+      "title": "What Is Strokes Gained",
+      "subtitle": "Mark Broadie's framework for measuring golf",
+      "iconName": "function",
+      "defaultPrompt": "Explain strokes gained from the ground up. Where did the concept come from, what does it actually measure, and why is it more useful than traditional stats like fairways hit or GIR?",
+      "promptTemplate": "Explain strokes gained — origin (Mark Broadie), what it measures, the baseline concept, and why it's more useful than traditional stats. {{skill_level_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "I've never heard of strokes gained — explain it like I'm new to it." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "I've seen the term in PGA Tour broadcasts — explain the math." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Include the baseline tables, expected-strokes derivation, and how DataGolf and ShotLink compute SG values." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick Answer", "promptFragment": "Give me the concept in plain English in a few sentences." },
+            { "value": "detailed", "label": "Detailed Explanation", "promptFragment": "Walk me through the framework with a concrete example." },
+            { "value": "history", "label": "History & Context", "promptFragment": "Tell me the story of how Mark Broadie developed strokes gained and why it became the dominant golf stat." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sg-off-the-tee",
+      "title": "SG: Off-the-Tee",
+      "subtitle": "Driving — distance, accuracy, and what matters",
+      "iconName": "arrow.up.forward",
+      "defaultPrompt": "Help me understand SG: Off-the-Tee. How is it calculated, what does a good number look like at my level, and what's more important — driving distance or driving accuracy?",
+      "promptTemplate": "Explain SG: Off-the-Tee — how it's calculated, typical values by handicap, and the distance-vs-accuracy debate. {{skill_level_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "Keep it simple — focus on what I should care about with my driver." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "Walk me through the SG-OTT calculation with examples." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Include Broadie's distance-vs-accuracy research, fairway value at different course types, and SG-OTT correlations to scoring." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick Answer", "promptFragment": "Give me the bottom line on what matters off the tee." },
+            { "value": "detailed", "label": "Detailed Explanation", "promptFragment": "Walk through the metric and what to focus on." },
+            { "value": "actionable", "label": "Actionable Takeaway", "promptFragment": "End with the highest-leverage thing I should work on for SG-OTT." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sg-approach",
+      "title": "SG: Approach",
+      "subtitle": "The most important stat in golf",
+      "iconName": "scope",
+      "defaultPrompt": "SG: Approach is the most predictive stat for tour scoring. Help me understand why, what good numbers look like, and how amateurs can improve their approach play.",
+      "promptTemplate": "Explain SG: Approach — why it's the most predictive of scoring, how it's calculated, typical values by handicap, and how amateurs can improve. {{skill_level_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "Keep it simple — focus on what I should work on with my approach shots." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "Walk me through SG: Approach with practical examples." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Include proximity-to-hole data, distance-band breakdowns, and the research showing SG: Approach is the strongest scoring predictor." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick Answer", "promptFragment": "Give me the headline and one improvement focus." },
+            { "value": "detailed", "label": "Detailed Explanation", "promptFragment": "Walk through the metric and the practical takeaways." },
+            { "value": "practice", "label": "How to Improve", "promptFragment": "Give me a practice plan focused on improving SG: Approach." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sg-around-the-green",
+      "title": "SG: Around-the-Green",
+      "subtitle": "Chipping, pitching, sand — the recovery stat",
+      "iconName": "flag.fill",
+      "defaultPrompt": "Help me understand SG: Around-the-Green. What shots count, how is it calculated, and where do amateurs typically gain or lose strokes around the green?",
+      "promptTemplate": "Explain SG: Around-the-Green — which shots count, how it's calculated, typical amateur patterns, and how to improve. {{skill_level_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "Keep it simple — focus on practical takeaways for short-game practice." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "Walk me through the metric with examples." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Include up-and-down rates, sand save data, and how lie type affects SG-ARG values." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick Answer", "promptFragment": "Give me the bottom line on around-the-green." },
+            { "value": "detailed", "label": "Detailed Explanation", "promptFragment": "Walk through the metric and what to focus on." },
+            { "value": "practice", "label": "How to Improve", "promptFragment": "Give me a short-game practice plan for SG-ARG." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sg-putting",
+      "title": "SG: Putting",
+      "subtitle": "The math behind tour-level putting",
+      "iconName": "scope",
+      "defaultPrompt": "Walk me through SG: Putting. How is it calculated, what does a good putting round look like statistically, and what skills does it actually measure?",
+      "promptTemplate": "Explain SG: Putting — how it's calculated, baseline expected putts by distance, what differentiates great putters, and how to improve. {{skill_level_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "Keep it simple — focus on practical putting takeaways." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "Walk me through the metric with examples." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Include make-rate baselines by distance, three-putt rates, and the research on putting variance vs skill." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick Answer", "promptFragment": "Give me the headline and one focus area." },
+            { "value": "detailed", "label": "Detailed Explanation", "promptFragment": "Walk through the metric thoroughly." },
+            { "value": "practice", "label": "How to Improve", "promptFragment": "Give me a putting practice plan tied to SG: Putting." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "where-amateurs-lose-strokes",
+      "title": "Where Amateurs Lose Strokes",
+      "subtitle": "What the data says about handicap-level golf",
+      "iconName": "chart.bar.fill",
+      "defaultPrompt": "What does the strokes gained data say about where amateur golfers actually lose strokes compared to better players? Where should I focus my practice if I want to drop strokes fastest?",
+      "promptTemplate": "Walk me through the strokes-gained research on where amateurs lose strokes — by handicap level, by category (off-tee, approach, ARG, putting), and where the highest-leverage practice focus is. {{skill_level_context}} {{handicap_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "Keep it simple — focus on what I should work on first." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "I've read some Broadie — go a layer deeper." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Include the per-handicap-level breakdowns, the share-of-strokes-lost-by-category data, and the marginal-improvement curves." }
+          ]
+        },
+        {
+          "id": "handicap_band",
+          "type": "dropdown",
+          "label": "My Handicap",
+          "templateVariable": "handicap_context",
+          "defaultValue": "any",
+          "options": [
+            { "value": "any", "label": "Any / Mixed", "promptFragment": "" },
+            { "value": "beginner_25plus", "label": "25+ Handicap", "promptFragment": "Focus on what 25+ handicap golfers should prioritize." },
+            { "value": "high_15_25", "label": "15–25", "promptFragment": "Focus on what 15–25 handicap golfers should prioritize." },
+            { "value": "mid_8_15", "label": "8–15", "promptFragment": "Focus on what 8–15 handicap golfers should prioritize." },
+            { "value": "low_0_8", "label": "0–8", "promptFragment": "Focus on what 0–8 handicap golfers should prioritize." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick Answer", "promptFragment": "Give me the highest-leverage focus area for my level." },
+            { "value": "detailed", "label": "Detailed Breakdown", "promptFragment": "Walk through where strokes are typically lost across categories." },
+            { "value": "plan", "label": "Practice Plan", "promptFragment": "Build me a practice plan based on the data." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "using-sg-direct-practice",
+      "title": "Using SG to Direct Practice",
+      "subtitle": "Turn data into a practice plan",
+      "iconName": "list.bullet.rectangle.portrait.fill",
+      "defaultPrompt": "I want to use strokes gained data to figure out where to spend my practice time. Walk me through how to gather the data, interpret it, and turn it into an actionable plan.",
+      "promptTemplate": "Walk me through using strokes gained data to direct my practice — gathering data (apps, scorecards, manual tracking), interpreting it, and building a practice plan based on weaknesses. {{skill_level_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "I'm new to tracking stats — start from scratch." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "I track basic stats already — help me move to SG-style tracking." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Include sample sizes needed for stable category estimates, baseline calibration, and how to factor course difficulty." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick Answer", "promptFragment": "Give me a simple workflow I can start using this week." },
+            { "value": "detailed", "label": "Detailed Walkthrough", "promptFragment": "Walk me through the full process from data to practice plan." },
+            { "value": "tools", "label": "Tools & Apps", "promptFragment": "Include specific apps and tools I can use to track strokes gained." }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,294 @@
+{
+  "groupID": "specialty-shots",
+  "version": 1,
+  "lastUpdated": "2026-05-01T12:00:00Z",
+  "topics": [
+    {
+      "id": "fairway-bunker",
+      "title": "Fairway Bunker Shots",
+      "subtitle": "Clean strikes from the sand",
+      "iconName": "circle.dotted",
+      "defaultPrompt": "Walk me through hitting a fairway bunker shot. What setup changes do I make, what swing changes, and how do I decide what club to use?",
+      "promptTemplate": "Walk me through fairway bunker shots — setup changes (ball position, weight, grip down), swing changes (steeper, ball-first), and club selection. {{skill_level_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "I'm scared of fairway bunkers — give me the basics." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "I'm okay from fairway bunkers but inconsistent — help me lock it in." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Include lip-height calculations, lie quality assessment, and how to play uneven sand lies." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick Answer", "promptFragment": "Give me the highest-leverage adjustments." },
+            { "value": "detailed", "label": "Detailed Walkthrough", "promptFragment": "Walk through setup, swing, and decision-making in full." },
+            { "value": "drills", "label": "Practice Drills", "promptFragment": "Give me drills to practice fairway bunker shots." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "plugged-bunker-lie",
+      "title": "Plugged Bunker Lies",
+      "subtitle": "When the ball is buried in the sand",
+      "iconName": "circle.fill",
+      "defaultPrompt": "Help me with plugged greenside bunker shots — fried-egg lies. How do I get out and how do I control distance from these tough lies?",
+      "promptTemplate": "Walk me through plugged greenside bunker lies — the fried-egg shot. Setup, swing, club face, and realistic expectations on distance and trajectory. {{skill_level_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "I dread plugged lies — give me the basics." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "I can usually escape but distance control is poor — help me improve." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Include face-square vs face-closed techniques, the explosion-shot mechanics, and managing run-out." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick Answer", "promptFragment": "Give me a simple recipe to escape." },
+            { "value": "detailed", "label": "Detailed Walkthrough", "promptFragment": "Walk through the technique thoroughly." },
+            { "value": "drills", "label": "Practice Drills", "promptFragment": "Give me drills for plugged-lie practice." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "punch-shot",
+      "title": "Punch Shots Under Trees",
+      "subtitle": "Low runners that escape trouble",
+      "iconName": "leaf.fill",
+      "defaultPrompt": "Walk me through hitting a low punch shot from under trees. What club, what setup, what swing changes, and how do I judge how low and how far it'll go?",
+      "promptTemplate": "Walk me through punch shots — low-trajectory escape shots. Cover club selection, setup adjustments, swing changes, and trajectory and distance estimation. {{skill_level_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "Give me the basic punch-shot recipe." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "Help me develop multiple trajectory levels." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Include club-loft delofting math, dynamic loft impact on trajectory, and how to control low/medium/high punch trajectories." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick Recipe", "promptFragment": "Give me the simple punch-shot recipe." },
+            { "value": "detailed", "label": "Detailed Walkthrough", "promptFragment": "Walk through club selection, setup, and execution thoroughly." },
+            { "value": "drills", "label": "Practice", "promptFragment": "Give me drills for trajectory control." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "side-hill-lies",
+      "title": "Side-Hill Lies",
+      "subtitle": "Ball above and below your feet",
+      "iconName": "arrow.up.right.and.arrow.down.left",
+      "defaultPrompt": "Help me with side-hill lies — ball above my feet and ball below my feet. What changes in setup, swing, and ball flight should I expect?",
+      "promptTemplate": "Walk me through side-hill lies — ball above feet and ball below feet. Setup adjustments, swing adjustments, expected ball flight, and club selection. {{skill_level_context}} {{lie_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "Keep it simple — give me the rules I can apply." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "Help me think through these lies systematically." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Include lie-angle changes, swing-plane adjustments, and how slope severity scales the corrections." }
+          ]
+        },
+        {
+          "id": "lie_type",
+          "type": "dropdown",
+          "label": "Lie Type",
+          "templateVariable": "lie_context",
+          "defaultValue": "both",
+          "options": [
+            { "value": "both", "label": "Both", "promptFragment": "Cover both ball-above-feet and ball-below-feet lies." },
+            { "value": "above", "label": "Ball Above Feet", "promptFragment": "Focus on ball-above-feet lies." },
+            { "value": "below", "label": "Ball Below Feet", "promptFragment": "Focus on ball-below-feet lies." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick Rules", "promptFragment": "Give me the rules and what to expect." },
+            { "value": "detailed", "label": "Detailed Walkthrough", "promptFragment": "Walk through both lies thoroughly." },
+            { "value": "drills", "label": "Practice", "promptFragment": "Give me drills for side-hill practice." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uphill-downhill-lies",
+      "title": "Uphill & Downhill Lies",
+      "subtitle": "Ball on a slope toward or away from target",
+      "iconName": "arrow.up.right",
+      "defaultPrompt": "Walk me through uphill and downhill lies — slope facing up toward the target or down toward the target. Setup, swing, and what to expect.",
+      "promptTemplate": "Walk me through uphill and downhill lies — setup adjustments (shoulders match slope), swing changes, expected ball flight (higher uphill, lower downhill), and club selection. {{skill_level_context}} {{lie_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "Give me the basic rules and what changes." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "Walk through both lies with practical adjustments." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Include effective-loft changes, attack-angle adjustments, and how slope severity affects club selection by yardage." }
+          ]
+        },
+        {
+          "id": "lie_type",
+          "type": "dropdown",
+          "label": "Lie Type",
+          "templateVariable": "lie_context",
+          "defaultValue": "both",
+          "options": [
+            { "value": "both", "label": "Both", "promptFragment": "Cover both uphill and downhill lies." },
+            { "value": "uphill", "label": "Uphill Lie", "promptFragment": "Focus on uphill lies — ball above your feet on the way to target." },
+            { "value": "downhill", "label": "Downhill Lie", "promptFragment": "Focus on downhill lies — ball below your feet on the way to target." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick Rules", "promptFragment": "Give me the rules and expected ball flight." },
+            { "value": "detailed", "label": "Detailed Walkthrough", "promptFragment": "Walk through both lies thoroughly." },
+            { "value": "drills", "label": "Practice", "promptFragment": "Give me drills for slope practice." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "high-soft-vs-low-runner",
+      "title": "High Soft Shots vs Low Runners",
+      "subtitle": "Two ways to attack the same target",
+      "iconName": "arrow.triangle.swap",
+      "defaultPrompt": "Help me decide between hitting a high soft shot and a low runner around the green. When does each one fit, and how do I execute each?",
+      "promptTemplate": "Walk me through high-soft shots vs low runners — when each fits the situation, club selection, technique, and trajectory control. {{skill_level_context}} {{shot_type_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "Help me pick between these and execute the simpler one." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "I can hit both but need to refine selection." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Include carry-vs-roll ratios by club, lie quality vs technique selection, and shot-pattern calibration." }
+          ]
+        },
+        {
+          "id": "shot_type",
+          "type": "dropdown",
+          "label": "Focus",
+          "templateVariable": "shot_type_context",
+          "defaultValue": "both",
+          "options": [
+            { "value": "both", "label": "Both Types + Decision", "promptFragment": "Cover both shot types and the decision between them." },
+            { "value": "high_soft", "label": "High Soft Shot", "promptFragment": "Focus on the high soft shot — flop / lob / pitch." },
+            { "value": "low_runner", "label": "Low Runner", "promptFragment": "Focus on low runners — bump-and-runs and pitch-and-run shots." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick Decision Rule", "promptFragment": "Give me the simple decision rule." },
+            { "value": "detailed", "label": "Detailed Walkthrough", "promptFragment": "Walk through both shots thoroughly." },
+            { "value": "drills", "label": "Drills", "promptFragment": "Give me drills for both shot types." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "wind-shots",
+      "title": "Hitting Into and With the Wind",
+      "subtitle": "Trajectory control for windy conditions",
+      "iconName": "wind",
+      "defaultPrompt": "Help me play in the wind. How do I hit lower into the wind, how do I take advantage with the wind, and what about crosswinds — should I work it into the wind or ride the wind?",
+      "promptTemplate": "Walk me through wind play — hitting low into the wind, taking advantage of downwind, and managing crosswinds. {{skill_level_context}} {{wind_direction_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "Give me the simple rules for wind play." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "Help me with trajectory control and crosswind decisions." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Include the math of wind effect on carry by trajectory, spin-loft and wind interactions, and tour-style trajectory windows." }
+          ]
+        },
+        {
+          "id": "wind_direction",
+          "type": "dropdown",
+          "label": "Wind Direction",
+          "templateVariable": "wind_direction_context",
+          "defaultValue": "all",
+          "options": [
+            { "value": "all", "label": "All Directions", "promptFragment": "Cover headwind, tailwind, and crosswinds." },
+            { "value": "into", "label": "Into the Wind", "promptFragment": "Focus on hitting into the wind — low trajectory, club up." },
+            { "value": "downwind", "label": "Downwind", "promptFragment": "Focus on downwind play — when to take advantage and when not to." },
+            { "value": "crosswind", "label": "Crosswinds", "promptFragment": "Focus on crosswinds — work it into vs ride the wind." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick Rules", "promptFragment": "Give me the rules for each wind direction." },
+            { "value": "detailed", "label": "Detailed Walkthrough", "promptFragment": "Walk through wind play thoroughly with examples." },
+            { "value": "club_adjust", "label": "Club Adjustments", "promptFragment": "Focus on how much club to adjust for wind speed." }
+          ]
+        }
+      ]
+    }
+  ]
+}

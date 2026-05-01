@@ -1,0 +1,284 @@
+{
+  "groupID": "drills-library",
+  "version": 1,
+  "lastUpdated": "2026-05-01T12:00:00Z",
+  "topics": [
+    {
+      "id": "top-10-drills",
+      "title": "Top 10 Drills Every Golfer Should Know",
+      "subtitle": "The starter set",
+      "iconName": "list.number",
+      "defaultPrompt": "Give me the top 10 golf drills that every golfer should know — the highest-leverage drills covering tempo, transition, contact, and face control.",
+      "promptTemplate": "Give me the top 10 golf drills every golfer should know — the highest-leverage drills across tempo, transition, contact, sequence, and face control. {{skill_level_context}} {{equipment_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "Pick drills appropriate for a newer golfer." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "Pick drills appropriate for a mid-handicap golfer." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Pick drills appropriate for a low-handicap or scratch player." }
+          ]
+        },
+        {
+          "id": "equipment",
+          "type": "dropdown",
+          "label": "Equipment",
+          "templateVariable": "equipment_context",
+          "defaultValue": "any",
+          "options": [
+            { "value": "any", "label": "Any Equipment", "promptFragment": "" },
+            { "value": "no_equipment", "label": "No Special Equipment", "promptFragment": "Pick drills that need no extra equipment beyond clubs and balls." },
+            { "value": "alignment_sticks", "label": "Alignment Sticks", "promptFragment": "Pick drills that use alignment sticks." },
+            { "value": "training_aids", "label": "Training Aids OK", "promptFragment": "Pick drills that may use common training aids." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick List", "promptFragment": "Give me a list with one-sentence descriptions." },
+            { "value": "detailed", "label": "Detailed Drills", "promptFragment": "For each drill: setup, execution, what it teaches, how to know it's working." },
+            { "value": "rotation", "label": "Practice Rotation", "promptFragment": "Tell me which drills to do in which order over a typical week." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "drills-no-ball",
+      "title": "Drills With No Ball",
+      "subtitle": "Practice you can do at home or in your office",
+      "iconName": "house.fill",
+      "defaultPrompt": "Give me golf drills I can do without hitting a ball — at home, in the office, or anywhere. What are the highest-leverage no-ball drills?",
+      "promptTemplate": "Give me drills that don't require hitting a ball — feel work, slow-motion swings, mirror drills, and prop drills you can do at home. {{skill_level_context}} {{focus_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "Give me beginner-friendly no-ball drills." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "Give me intermediate-level no-ball drills." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Give me advanced-feel and slow-motion drills for fine-tuning." }
+          ]
+        },
+        {
+          "id": "focus_area",
+          "type": "dropdown",
+          "label": "Focus",
+          "templateVariable": "focus_context",
+          "defaultValue": "general",
+          "options": [
+            { "value": "general", "label": "General", "promptFragment": "Cover a range of swing-area focuses." },
+            { "value": "tempo", "label": "Tempo & Rhythm", "promptFragment": "Focus on tempo and rhythm drills." },
+            { "value": "sequence", "label": "Sequence & Transition", "promptFragment": "Focus on sequencing and transition drills." },
+            { "value": "rotation", "label": "Rotation & Mobility", "promptFragment": "Focus on rotation and mobility drills." },
+            { "value": "wrists", "label": "Wrists & Release", "promptFragment": "Focus on wrist hinge and release drills." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick List", "promptFragment": "Give me a list of drills with one-sentence descriptions." },
+            { "value": "detailed", "label": "Detailed Drills", "promptFragment": "Walk through each drill with setup, execution, and feel." },
+            { "value": "daily", "label": "Daily Routine", "promptFragment": "Build me a 10-minute daily no-ball routine." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tempo-drills",
+      "title": "Tempo Drills",
+      "subtitle": "Building consistent rhythm",
+      "iconName": "metronome",
+      "defaultPrompt": "Give me drills to build better swing tempo — the 3:1 ratio of backswing to downswing time. What drills work best?",
+      "promptTemplate": "Give me drills to build better swing tempo — including the classic 3:1 ratio work, metronome drills, count drills, and feel drills. {{skill_level_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "Give me beginner-level tempo drills." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "Give me intermediate tempo drills." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Include advanced tempo work like Tour Tempo and biomechanical timing drills." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick List", "promptFragment": "Give me a list of tempo drills." },
+            { "value": "detailed", "label": "Detailed Drills", "promptFragment": "Walk through each drill in detail." },
+            { "value": "weekly", "label": "Weekly Plan", "promptFragment": "Build me a weekly tempo-development plan." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "transition-drills",
+      "title": "Transition Drills",
+      "subtitle": "Pump, step, and pause work for the magic move",
+      "iconName": "arrow.turn.down.left",
+      "defaultPrompt": "Give me drills to develop a great transition — the move from end-of-backswing into the start of the downswing. Pump drills, step drills, pause drills.",
+      "promptTemplate": "Give me drills to develop a strong transition — pump drill, step drill, pause-at-top drill, and other transition-specific work. {{skill_level_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "Start me with the simplest transition drills." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "Give me intermediate transition drills." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Include advanced transition drills with weighted clubs, asymmetric loading, and force-plate-style work." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick List", "promptFragment": "Give me 5 best transition drills with one-line descriptions." },
+            { "value": "detailed", "label": "Detailed Drills", "promptFragment": "Walk through each drill with execution and feel." },
+            { "value": "progression", "label": "Progression Plan", "promptFragment": "Build a multi-week progression to develop a great transition." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "path-drills",
+      "title": "Path Drills",
+      "subtitle": "Fixing in-to-out and out-to-in patterns",
+      "iconName": "arrow.up.right",
+      "defaultPrompt": "Give me drills to fix my swing path. What drills work for going from out-to-in to neutral, or from too-much in-to-out to neutral?",
+      "promptTemplate": "Give me drills to fix swing path — both out-to-in (over the top) and excessive in-to-out. {{skill_level_context}} {{path_focus_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "Start with the simplest path drills." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "Give me effective path drills with progression." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Include path drills with face awareness and TrackMan-style feedback work." }
+          ]
+        },
+        {
+          "id": "path_focus",
+          "type": "dropdown",
+          "label": "Path Issue",
+          "templateVariable": "path_focus_context",
+          "defaultValue": "all",
+          "options": [
+            { "value": "all", "label": "Both Patterns", "promptFragment": "Cover drills for both over-the-top and too-in-to-out." },
+            { "value": "over_top", "label": "Over-the-Top", "promptFragment": "Focus on drills to fix over-the-top." },
+            { "value": "too_inside", "label": "Too In-to-Out", "promptFragment": "Focus on drills to fix excessive in-to-out path." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick List", "promptFragment": "Give me the top drills with one-line descriptions." },
+            { "value": "detailed", "label": "Detailed Drills", "promptFragment": "Walk through each drill thoroughly." },
+            { "value": "progression", "label": "Progression Plan", "promptFragment": "Build a progression for fixing my path over weeks." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "face-control-drills",
+      "title": "Face Control Drills",
+      "subtitle": "Learning to square the face",
+      "iconName": "rectangle.fill",
+      "defaultPrompt": "Give me drills to learn face control — squaring the clubface at impact. What drills help me feel and own face control?",
+      "promptTemplate": "Give me drills for clubface control — squaring the face at impact, controlling face rotation through impact, and reducing face variance. {{skill_level_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "Give me simple face-control drills." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "Give me intermediate face-control drills with progression." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Include face-rotation drills tied to release patterns and grip changes." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick List", "promptFragment": "Give me the top 5 face-control drills." },
+            { "value": "detailed", "label": "Detailed Drills", "promptFragment": "Walk through each drill in detail." },
+            { "value": "weekly", "label": "Weekly Plan", "promptFragment": "Build me a face-control practice plan over weeks." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ball-first-contact-drills",
+      "title": "Ball-First Contact Drills",
+      "subtitle": "Compression and clean contact every time",
+      "iconName": "circle.bottomhalf.filled",
+      "defaultPrompt": "Give me drills to make ball-first contact every time — compressing the iron and taking a divot after the ball.",
+      "promptTemplate": "Give me drills to develop ball-first contact — towel drill, divot drill, low-point control work, and compression drills. {{skill_level_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "Start with the simplest contact drills." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "Give me intermediate contact drills." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Include drills focused on compression, low-point dispersion, and divot direction." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick List", "promptFragment": "Give me the top contact drills with one-line descriptions." },
+            { "value": "detailed", "label": "Detailed Drills", "promptFragment": "Walk through each drill thoroughly." },
+            { "value": "progression", "label": "Progression Plan", "promptFragment": "Build a progression to develop consistent ball-first contact." }
+          ]
+        }
+      ]
+    }
+  ]
+}

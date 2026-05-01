@@ -1,0 +1,283 @@
+{
+  "groupID": "ball-flight-laws",
+  "version": 1,
+  "lastUpdated": "2026-05-01T12:00:00Z",
+  "topics": [
+    {
+      "id": "nine-ball-flights",
+      "title": "The 9 Ball Flights",
+      "subtitle": "Every shot fits one of nine patterns",
+      "iconName": "circle.grid.3x3.fill",
+      "defaultPrompt": "Walk me through the nine ball flights — every combination of starting direction and curve. What does each one tell me about my path and face, and which ones reveal which faults?",
+      "promptTemplate": "Walk me through the nine ball flight patterns — starting direction (left/straight/right) crossed with curve (left/straight/right). What does each pattern tell me about path and face? {{skill_level_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "I'm new to ball flight — keep it simple and visual." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "I understand the basic concept — help me see all nine patterns clearly." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Include the face-vs-path numbers that produce each, and the typical mechanical causes of each pattern." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick Reference", "promptFragment": "Give me a clean table or list of the nine patterns." },
+            { "value": "detailed", "label": "Detailed Explanation", "promptFragment": "Walk through each pattern with the underlying mechanics." },
+            { "value": "diagnostic", "label": "Use as Diagnostic", "promptFragment": "Frame this as a diagnostic — for each pattern, what is my swing telling me." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "path-vs-face-new-laws",
+      "title": "Path vs Face — The New Laws",
+      "subtitle": "Why old-school ball flight teaching was wrong",
+      "iconName": "arrow.up.right",
+      "defaultPrompt": "Explain the new ball flight laws (post-2007 launch monitor era). Specifically, the ball starts mostly toward where the face points, not where the path goes. Walk me through what changed and why old teaching was wrong.",
+      "promptTemplate": "Explain the new ball flight laws — that starting direction is dominated by clubface (about 80%), not swing path. Cover what changed when launch monitors revealed it, and how teaching shifted. {{skill_level_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "Keep the explanation simple — what does this mean for me." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "I've heard about the new laws — go deeper on why it matters." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Include the 85/15 rule, gear effect on the driver, and how ball compression and friction angle interact." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick Answer", "promptFragment": "Give me the headline and what to do with it." },
+            { "value": "detailed", "label": "Detailed Explanation", "promptFragment": "Walk through old teaching, what TrackMan revealed, and the corrected laws." },
+            { "value": "actionable", "label": "What This Changes", "promptFragment": "Focus on what these laws change about how I should think about my swing." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "spin-loft-explained",
+      "title": "Spin Loft Explained",
+      "subtitle": "The angle that controls compression and spin",
+      "iconName": "arrow.up.and.down.righttriangle.up.righttriangle.down.fill",
+      "defaultPrompt": "Walk me through spin loft — the angle between dynamic loft and attack angle. How does it control spin, compression, and trajectory, and how do I optimize it for each club?",
+      "promptTemplate": "Explain spin loft — the angle between dynamic loft and attack angle. Cover how it controls spin and compression, optimal ranges by club, and how to manipulate it. {{skill_level_context}} {{club_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "Keep it simple — what is spin loft and why should I care." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "I follow launch monitor data — explain spin loft in detail." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Include spin-loft-to-spin curves, the role of friction, and how spin loft interacts with strike location." }
+          ]
+        },
+        {
+          "id": "club_type",
+          "type": "dropdown",
+          "label": "Club",
+          "templateVariable": "club_context",
+          "defaultValue": "all",
+          "options": [
+            { "value": "all", "label": "All Clubs", "promptFragment": "Cover spin loft optimization across all clubs." },
+            { "value": "driver", "label": "Driver", "promptFragment": "Focus on driver — low spin loft for distance." },
+            { "value": "irons", "label": "Irons", "promptFragment": "Focus on irons — spin loft for compression and stopping power." },
+            { "value": "wedges", "label": "Wedges", "promptFragment": "Focus on wedges — spin loft for spin and trajectory control." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick Answer", "promptFragment": "Give me the bottom line on spin loft." },
+            { "value": "detailed", "label": "Detailed Explanation", "promptFragment": "Walk through spin loft thoroughly with examples." },
+            { "value": "actionable", "label": "How to Optimize", "promptFragment": "Tell me how to actually adjust my spin loft on the range." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attack-angle",
+      "title": "Attack Angle",
+      "subtitle": "Hitting up or down — when each is right",
+      "iconName": "arrow.up.right.and.arrow.down.left",
+      "defaultPrompt": "Walk me through attack angle — the angle the club is moving relative to the ground at impact. When should I be hitting down, when should I be hitting up, and what's optimal for each club?",
+      "promptTemplate": "Explain attack angle — what it is, when to hit down vs up, optimal AoA by club, and how attack angle affects distance, spin, and trajectory. {{skill_level_context}} {{club_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "Keep it simple — what is attack angle and what should mine be." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "Explain AoA in launch monitor terms with practical takeaways." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Include AoA-to-distance curves, the +5 driver AoA research, and how AoA combines with face/path to produce ball flight." }
+          ]
+        },
+        {
+          "id": "club_type",
+          "type": "dropdown",
+          "label": "Club",
+          "templateVariable": "club_context",
+          "defaultValue": "all",
+          "options": [
+            { "value": "all", "label": "All Clubs", "promptFragment": "Cover attack angle across all clubs." },
+            { "value": "driver", "label": "Driver", "promptFragment": "Focus on driver — why hitting up is optimal and how much." },
+            { "value": "irons", "label": "Irons", "promptFragment": "Focus on irons — proper downward strike and divot patterns." },
+            { "value": "wedges", "label": "Wedges", "promptFragment": "Focus on wedges — steeper AoA for control and spin." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick Answer", "promptFragment": "Give me the bottom line on AoA for my game." },
+            { "value": "detailed", "label": "Detailed Explanation", "promptFragment": "Walk through AoA thoroughly with examples." },
+            { "value": "drills", "label": "Drills & Setup", "promptFragment": "Give me setup adjustments and drills to dial in AoA." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "smash-factor",
+      "title": "Smash Factor",
+      "subtitle": "How efficient is your strike?",
+      "iconName": "burst.fill",
+      "defaultPrompt": "What is smash factor, what does it tell me about my strike, and what's a realistic target by club?",
+      "promptTemplate": "Explain smash factor — ball speed divided by clubhead speed. What it measures, optimal values by club, what hurts smash factor, and how to improve it. {{skill_level_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "Keep it simple — what does smash factor tell me." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "I see smash factor on the launch monitor — go deeper." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Include theoretical max smash, COR limits, and the strike location and gear effect impacts." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick Answer", "promptFragment": "Give me the key numbers and what to do if mine is low." },
+            { "value": "detailed", "label": "Detailed Explanation", "promptFragment": "Walk through smash factor thoroughly." },
+            { "value": "improvement", "label": "How to Improve", "promptFragment": "Focus on practical ways to improve my smash factor." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "carry-vs-total",
+      "title": "Carry vs Total Distance",
+      "subtitle": "Why the number you care about is carry",
+      "iconName": "ruler",
+      "defaultPrompt": "Walk me through the difference between carry distance and total distance. Why does carry matter more for course management, and how do I figure out my real carry numbers?",
+      "promptTemplate": "Explain carry vs total distance — what each measures, why carry matters more for course management, and how to figure out real carry yardages. {{skill_level_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "Keep it simple — what should I be using to pick clubs." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "Help me get accurate carry numbers and use them on course." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Include altitude, temperature, humidity, and turf-firmness corrections to expected total." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick Answer", "promptFragment": "Give me the bottom line and what to do with my numbers." },
+            { "value": "detailed", "label": "Detailed Explanation", "promptFragment": "Walk through both metrics thoroughly." },
+            { "value": "method", "label": "Method to Find Mine", "promptFragment": "Give me a method to nail down my real carry distances." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "shaping-draw-fade",
+      "title": "Shaping the Ball — Draw and Fade",
+      "subtitle": "Hitting it both ways on command",
+      "iconName": "arrow.triangle.swap",
+      "defaultPrompt": "Help me learn to shape the ball — both draw and fade — on command. What's the simplest way to think about it, and what do I need to do at setup and through the swing?",
+      "promptTemplate": "Help me learn to shape shots — both draw and fade on command. Cover the conceptual model (path vs face), setup adjustments, swing thoughts, and how to practice shaping. {{skill_level_context}} {{shape_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "I just want to be able to curve it on purpose — keep it simple." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "I shape shots occasionally — help me do it on command." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Include face-to-path numbers needed for each shape, working draws/fades, and shaping by curvature amount." }
+          ]
+        },
+        {
+          "id": "shape_focus",
+          "type": "dropdown",
+          "label": "Shape",
+          "templateVariable": "shape_context",
+          "defaultValue": "both",
+          "options": [
+            { "value": "both", "label": "Both Shapes", "promptFragment": "Cover both draw and fade." },
+            { "value": "draw", "label": "Draw Only", "promptFragment": "Focus on hitting a draw on command." },
+            { "value": "fade", "label": "Fade Only", "promptFragment": "Focus on hitting a fade on command." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick Answer", "promptFragment": "Give me the simplest way to curve it both ways." },
+            { "value": "detailed", "label": "Detailed Method", "promptFragment": "Walk through setup and swing changes for each shape." },
+            { "value": "practice", "label": "Practice Plan", "promptFragment": "Give me a practice plan to develop reliable shape control." }
+          ]
+        }
+      ]
+    }
+  ]
+}

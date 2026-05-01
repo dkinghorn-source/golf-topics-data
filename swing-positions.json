@@ -1,0 +1,363 @@
+{
+  "groupID": "swing-positions",
+  "version": 1,
+  "lastUpdated": "2026-05-01T12:00:00Z",
+  "topics": [
+    {
+      "id": "address-position-checkpoints",
+      "title": "Address Position (P1)",
+      "subtitle": "What to check at setup",
+      "iconName": "figure.stand",
+      "defaultPrompt": "Walk me through what to look for at the address position. Posture, ball position, weight distribution, alignment — what should I be checking before every swing?",
+      "promptTemplate": "Walk me through what to look for at address (P1) — posture, spine angle, weight distribution, ball position, alignment, grip, and stance width. {{skill_level_context}} {{view_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "Keep it simple — give me a checklist I can run before each shot." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "I have a setup but want to refine it — help me catch what's off." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Include shaft lean, hand position relative to ball, sternum-to-ball relationship, and how setup variations correlate to ball flight differences." }
+          ]
+        },
+        {
+          "id": "camera_view",
+          "type": "dropdown",
+          "label": "Camera View",
+          "templateVariable": "view_context",
+          "defaultValue": "both",
+          "options": [
+            { "value": "both", "label": "Both Views", "promptFragment": "Cover what to look for from both face-on and down-the-line views." },
+            { "value": "face_on", "label": "Face-On", "promptFragment": "Focus on what to check from the face-on (front) view." },
+            { "value": "dtl", "label": "Down-the-Line", "promptFragment": "Focus on what to check from the down-the-line view." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick Checklist", "promptFragment": "Give me a 5-item checklist I can run on a video." },
+            { "value": "detailed", "label": "Detailed Walkthrough", "promptFragment": "Walk through every checkpoint with what good looks like." },
+            { "value": "drills", "label": "Drills & Self-Tests", "promptFragment": "Give me drills and self-tests to verify my setup." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "halfway-back-p2",
+      "title": "Halfway Back (P2)",
+      "subtitle": "Shaft parallel to the ground in the takeaway",
+      "iconName": "arrow.up.right.circle",
+      "defaultPrompt": "What should I look for at P2, when the shaft is parallel to the ground in the backswing? Where should the clubface be, where should the hands be, and what does a great P2 look like?",
+      "promptTemplate": "Walk me through what to look for at P2 (shaft parallel to the ground in the backswing) — clubface angle, club position relative to hands, hand position, and body rotation. {{skill_level_context}} {{view_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "Keep it simple — give me 2 or 3 things I can check at this position." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "I check P2 already — help me sharpen what good looks like." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Include face-to-toe-up, club shaft on or under hands plane, and what range of acceptable P2 looks like for different swing models." }
+          ]
+        },
+        {
+          "id": "camera_view",
+          "type": "dropdown",
+          "label": "Camera View",
+          "templateVariable": "view_context",
+          "defaultValue": "both",
+          "options": [
+            { "value": "both", "label": "Both Views", "promptFragment": "Cover both face-on and down-the-line P2 checks." },
+            { "value": "face_on", "label": "Face-On", "promptFragment": "Focus on the face-on P2 checks." },
+            { "value": "dtl", "label": "Down-the-Line", "promptFragment": "Focus on the down-the-line P2 checks — this is the most important view for shaft and face position." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick Checklist", "promptFragment": "Give me a fast P2 checklist." },
+            { "value": "detailed", "label": "Detailed Walkthrough", "promptFragment": "Walk through every aspect of a great P2." },
+            { "value": "drills", "label": "Drills", "promptFragment": "Give me drills to find and feel a great P2." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "top-of-backswing-p4",
+      "title": "Top of Backswing (P4)",
+      "subtitle": "What makes a great top — and what doesn't",
+      "iconName": "arrow.up",
+      "defaultPrompt": "What should I look for at the top of the backswing (P4)? Length of swing, shaft position, clubface, lead arm, body coil — what does a great top of swing look like?",
+      "promptTemplate": "Walk me through what to look for at the top of the backswing (P4) — shaft position relative to target, clubface angle, lead arm position, body coil, and wrist conditions. {{skill_level_context}} {{view_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "Keep it simple — what's most important at the top of the swing." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "I have a top position — help me refine it and spot common issues." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Include shaft pointing at parallel/across/laid-off, lead wrist flexion/extension, X-factor, and how P4 variations correlate to downswing patterns." }
+          ]
+        },
+        {
+          "id": "camera_view",
+          "type": "dropdown",
+          "label": "Camera View",
+          "templateVariable": "view_context",
+          "defaultValue": "both",
+          "options": [
+            { "value": "both", "label": "Both Views", "promptFragment": "Cover both views." },
+            { "value": "face_on", "label": "Face-On", "promptFragment": "Focus on face-on P4 — turn, sway, and lead arm angle." },
+            { "value": "dtl", "label": "Down-the-Line", "promptFragment": "Focus on down-the-line P4 — shaft position, plane, and clubface angle." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick Checklist", "promptFragment": "Give me a 5-item P4 checklist." },
+            { "value": "detailed", "label": "Detailed Walkthrough", "promptFragment": "Walk through every aspect of a great P4." },
+            { "value": "drills", "label": "Drills & Feels", "promptFragment": "Give me drills and feels to find a great top of swing." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "transition-p5",
+      "title": "Transition (P5) — The Magic Move",
+      "subtitle": "Where the swing is won or lost",
+      "iconName": "arrow.turn.down.left",
+      "defaultPrompt": "Walk me through the transition from backswing to downswing — what's often called the 'magic move'. What's happening at P5 (lead arm parallel down) and what should I be looking for?",
+      "promptTemplate": "Walk me through transition (P5, lead arm parallel down) — pelvis lead, shaft shallowing, hand path, weight shift, and what separates great transitions from amateur ones. {{skill_level_context}} {{view_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "Keep transition simple — what's the one most important thing." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "I understand transition is critical — help me see and feel a great one." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Include shaft shallowing mechanics, hand path drop, pelvis-thorax separation peaks, and ground reaction force patterns at transition." }
+          ]
+        },
+        {
+          "id": "camera_view",
+          "type": "dropdown",
+          "label": "Camera View",
+          "templateVariable": "view_context",
+          "defaultValue": "both",
+          "options": [
+            { "value": "both", "label": "Both Views", "promptFragment": "Cover both face-on and down-the-line transition checks." },
+            { "value": "face_on", "label": "Face-On", "promptFragment": "Focus on face-on transition — pressure shift, hip lateral move, lead leg posting." },
+            { "value": "dtl", "label": "Down-the-Line", "promptFragment": "Focus on down-the-line transition — shaft drop, plane shallowing, hand path." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick Answer", "promptFragment": "Give me the one or two highest-leverage transition checks." },
+            { "value": "detailed", "label": "Full Walkthrough", "promptFragment": "Walk through a great transition phase by phase." },
+            { "value": "drills", "label": "Drills & Feels", "promptFragment": "Give me drills and feels to ingrain a great transition." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pre-impact-p6",
+      "title": "Pre-Impact (P6)",
+      "subtitle": "Shaft parallel down — the delivery position",
+      "iconName": "target",
+      "defaultPrompt": "Walk me through P6, when the shaft is parallel to the ground on the way down. What should the shaft, hands, and body look like just before impact?",
+      "promptTemplate": "Walk me through pre-impact (P6, shaft parallel to the ground in the downswing) — shaft lean, hand position, body rotation, clubface, and what differentiates a great delivery from a flippy one. {{skill_level_context}} {{view_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "Keep it simple — give me one or two key things to spot." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "I look at P6 occasionally — help me understand it better." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Include shaft pointing line, lag retention, lead wrist condition, and how P6 predicts ball flight." }
+          ]
+        },
+        {
+          "id": "camera_view",
+          "type": "dropdown",
+          "label": "Camera View",
+          "templateVariable": "view_context",
+          "defaultValue": "dtl",
+          "options": [
+            { "value": "both", "label": "Both Views", "promptFragment": "Cover both views." },
+            { "value": "face_on", "label": "Face-On", "promptFragment": "Focus on face-on P6 — hand position, body rotation, shaft lean." },
+            { "value": "dtl", "label": "Down-the-Line", "promptFragment": "Focus on down-the-line P6 — this is the most diagnostic view for delivery." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick Checklist", "promptFragment": "Give me the key P6 checks." },
+            { "value": "detailed", "label": "Detailed Walkthrough", "promptFragment": "Walk through every aspect of a great P6." },
+            { "value": "drills", "label": "Drills", "promptFragment": "Give me drills to ingrain a strong P6 delivery." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "impact-p7",
+      "title": "Impact (P7)",
+      "subtitle": "The moment of truth — what to look for",
+      "iconName": "target",
+      "defaultPrompt": "Walk me through impact position (P7). What should the shaft, hands, hips, and head be doing at the moment of contact?",
+      "promptTemplate": "Walk me through impact (P7) — shaft lean, hand position, hip rotation, weight forward, head position, and what separates a tour-quality impact from an amateur one. {{skill_level_context}} {{view_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "Keep it simple — what's the most important thing at impact." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "I understand basic impact — help me refine the picture." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Include forward shaft lean numbers, pelvis open angle, lead leg post, and how impact position correlates to dynamic loft and compression." }
+          ]
+        },
+        {
+          "id": "camera_view",
+          "type": "dropdown",
+          "label": "Camera View",
+          "templateVariable": "view_context",
+          "defaultValue": "both",
+          "options": [
+            { "value": "both", "label": "Both Views", "promptFragment": "Cover both views." },
+            { "value": "face_on", "label": "Face-On", "promptFragment": "Focus on face-on impact — hip rotation, shaft lean, head position, weight." },
+            { "value": "dtl", "label": "Down-the-Line", "promptFragment": "Focus on down-the-line impact — spine angle, hand path, club delivery." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick Checklist", "promptFragment": "Give me the top 5 impact checks." },
+            { "value": "detailed", "label": "Full Walkthrough", "promptFragment": "Walk through every element of a great impact." },
+            { "value": "drills", "label": "Drills", "promptFragment": "Give me drills to ingrain great impact mechanics." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "follow-through-p8-p9",
+      "title": "Follow-Through (P8–P9)",
+      "subtitle": "What good extension and rotation look like",
+      "iconName": "arrow.up.right",
+      "defaultPrompt": "What should I look for in the follow-through, from just past impact (P8) through lead-arm-parallel after impact (P9)? Extension, body rotation, balance — what does good look like?",
+      "promptTemplate": "Walk me through the follow-through (P8 just past impact through P9 lead arm parallel through) — extension, body rotation, club path, and what good follow-through tells me about the swing before it. {{skill_level_context}} {{view_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "Keep it simple — what should my finish look like." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "Help me understand what follow-through tells me about my swing." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Include exit plane, post-impact extension, and how chicken-wing and other faults show up at P8/P9." }
+          ]
+        },
+        {
+          "id": "camera_view",
+          "type": "dropdown",
+          "label": "Camera View",
+          "templateVariable": "view_context",
+          "defaultValue": "both",
+          "options": [
+            { "value": "both", "label": "Both Views", "promptFragment": "Cover both views." },
+            { "value": "face_on", "label": "Face-On", "promptFragment": "Focus on face-on follow-through." },
+            { "value": "dtl", "label": "Down-the-Line", "promptFragment": "Focus on down-the-line follow-through — exit plane, club path." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick Answer", "promptFragment": "Give me the one or two key follow-through checks." },
+            { "value": "detailed", "label": "Detailed Walkthrough", "promptFragment": "Walk through both phases thoroughly." },
+            { "value": "drills", "label": "Drills", "promptFragment": "Give me drills to build a great follow-through." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "the-finish-p10",
+      "title": "The Finish (P10)",
+      "subtitle": "What your finish tells you about the swing",
+      "iconName": "flag.fill",
+      "defaultPrompt": "What should my finish position look like, and what does my finish tell me about the rest of the swing? Why do tour pros all hold their finish?",
+      "promptTemplate": "Walk me through the finish position (P10) — what good balance and rotation look like, and what the finish reveals about the rest of the swing. {{skill_level_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "Keep it simple — what should I feel at the finish." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "Help me understand what my finish reveals about my swing." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Include weight distribution, spine tilt, hip rotation, and which finish faults map to which downswing problems." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick Answer", "promptFragment": "Give me the key things to check at the finish." },
+            { "value": "detailed", "label": "Detailed Walkthrough", "promptFragment": "Walk through a great finish in full detail." },
+            { "value": "drills", "label": "Drills", "promptFragment": "Give me drills to build balance and a great finish." }
+          ]
+        }
+      ]
+    }
+  ]
+}

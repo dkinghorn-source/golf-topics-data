@@ -1,0 +1,211 @@
+{
+  "groupID": "equipment-fitting",
+  "version": 1,
+  "lastUpdated": "2026-05-01T12:00:00Z",
+  "topics": [
+    {
+      "id": "driver-loft-spin",
+      "title": "Driver Loft & Spin",
+      "subtitle": "Optimizing for distance and forgiveness",
+      "iconName": "arrow.up.forward",
+      "defaultPrompt": "Help me think through driver loft and spin. What loft is right for my swing, what spin numbers should I be looking for, and how do I find optimal launch conditions?",
+      "promptTemplate": "Walk me through driver loft and spin optimization — picking the right loft for swing speed and attack angle, target spin ranges, and how to read launch monitor data for driver fitting. {{skill_level_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "Keep it simple — what driver loft should I have." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "I track launch and spin — help me optimize." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Include the optimal launch/spin curves by speed, the high-launch low-spin paradigm, and trade-offs with stock loft vs adjustable settings." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick Answer", "promptFragment": "Give me the headline numbers for my situation." },
+            { "value": "detailed", "label": "Detailed Walkthrough", "promptFragment": "Walk through loft and spin optimization thoroughly." },
+            { "value": "fitting", "label": "Fitting Process", "promptFragment": "Walk me through what a good driver fitting looks like." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "iron-lie-angle",
+      "title": "Iron Lie Angle",
+      "subtitle": "Why your irons might be aimed wrong without you knowing",
+      "iconName": "ruler.fill",
+      "defaultPrompt": "Walk me through iron lie angle. How do I tell if my irons are off, what does the wrong lie do to ball flight, and how do I check and adjust?",
+      "promptTemplate": "Walk me through iron lie angle — how to check it (lie board / impact tape), what wrong lie does to ball flight, and the static-vs-dynamic-fit debate. {{skill_level_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "I've never thought about lie angle — start from scratch." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "I know the basics — help me check mine." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Include impact-dynamic lie vs static lie, scaling lie change to direction error, and how shaft length interacts." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick Answer", "promptFragment": "Give me the simple way to check and what to do about it." },
+            { "value": "detailed", "label": "Detailed Walkthrough", "promptFragment": "Walk through everything about lie angle." },
+            { "value": "diy", "label": "DIY Self-Test", "promptFragment": "Give me self-test methods I can run at home or the range." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "shaft-flex-weight",
+      "title": "Shaft Flex & Weight",
+      "subtitle": "Why the shaft matters more than the head",
+      "iconName": "arrow.up.and.down",
+      "defaultPrompt": "Walk me through shaft flex and weight. How do I tell what flex I should be in, how much does shaft weight matter, and is the shaft really more important than the head?",
+      "promptTemplate": "Walk me through shaft flex and weight — how to pick flex by speed and tempo, how shaft weight affects swing dynamics, and how shaft choice interacts with head choice. {{skill_level_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "Keep it simple — what flex should I be in." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "Help me understand shaft choice across the bag." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Include CPM measurement, butt vs tip stiffness profiles, torque, and how shaft characteristics affect launch and spin." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick Guide", "promptFragment": "Give me the basics on flex and weight selection." },
+            { "value": "detailed", "label": "Detailed Walkthrough", "promptFragment": "Walk through shaft selection thoroughly." },
+            { "value": "fitting", "label": "Fitting Process", "promptFragment": "Walk me through what a shaft fitting looks like." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ball-selection",
+      "title": "Golf Ball Selection",
+      "subtitle": "Tour ball, distance ball, or somewhere in between?",
+      "iconName": "circle.fill",
+      "defaultPrompt": "Walk me through golf ball selection. What's the difference between tour balls, distance balls, and value balls — and how do I figure out which fits me?",
+      "promptTemplate": "Walk me through golf ball selection — tour balls vs distance balls vs value balls, the construction differences, and how to pick the ball that fits your game. {{skill_level_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "Keep it simple — what ball should I play." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "Help me pick a ball based on my game." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Include compression, spin rates by full vs partial shots, urethane vs ionomer covers, and the data on what swing speed actually 'needs' a tour ball." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick Answer", "promptFragment": "Give me a simple recommendation." },
+            { "value": "detailed", "label": "Detailed Walkthrough", "promptFragment": "Walk through ball categories thoroughly." },
+            { "value": "test_method", "label": "Test Method", "promptFragment": "Give me a method to ball-test myself and pick." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "wedge-bounce",
+      "title": "Wedge Bounce",
+      "subtitle": "Choosing wedges for your turf and technique",
+      "iconName": "triangle.fill",
+      "defaultPrompt": "Walk me through wedge bounce. What is bounce, how much do I need, and how does it interact with my home turf conditions and my technique?",
+      "promptTemplate": "Walk me through wedge bounce — what it is, how to pick the right amount, and how bounce interacts with turf conditions and angle of attack. {{skill_level_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "I have no idea — start from scratch." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "I know what bounce is — help me pick wisely." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Include grind options (S, K, M, L), effective bounce by attack angle, and how to fit bounce to your home course." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick Guide", "promptFragment": "Give me the simple bounce-selection rule." },
+            { "value": "detailed", "label": "Detailed Walkthrough", "promptFragment": "Walk through bounce thoroughly." },
+            { "value": "set_makeup", "label": "Wedge Set Makeup", "promptFragment": "Help me design a 3-wedge or 4-wedge setup with appropriate bounces." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "when-to-get-fit",
+      "title": "When to Get Fit",
+      "subtitle": "And what to expect from a good fitting",
+      "iconName": "calendar",
+      "defaultPrompt": "When should I get fit for clubs — at what skill level, how often, and what should a good fitting look like? How do I avoid sales-driven fittings?",
+      "promptTemplate": "Walk me through when to get fit for clubs — skill level threshold, frequency, what a good fitting looks like, and how to avoid OEM-sales fittings vs independent fitters. {{skill_level_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "I'm new — should I even get fit yet?" },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "Help me decide if it's worth it now and what to expect." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Include independent fitter networks, club-by-club fittings, and how to use launch-monitor data outside a fitting context." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick Answer", "promptFragment": "Give me a yes/no with rationale." },
+            { "value": "detailed", "label": "Detailed Walkthrough", "promptFragment": "Walk through the decision and what to expect." },
+            { "value": "checklist", "label": "Pre-Fitting Checklist", "promptFragment": "Give me a checklist to prepare for a fitting." }
+          ]
+        }
+      ]
+    }
+  ]
+}

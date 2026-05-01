@@ -1,0 +1,245 @@
+{
+  "groupID": "setup-preshot",
+  "version": 1,
+  "lastUpdated": "2026-05-01T12:00:00Z",
+  "topics": [
+    {
+      "id": "ball-position-by-club",
+      "title": "Ball Position by Club",
+      "subtitle": "Where the ball sits in your stance",
+      "iconName": "circle.fill",
+      "defaultPrompt": "Walk me through ball position for each club — driver, fairway woods, hybrids, irons, wedges. What's the standard position, why does it matter, and how does it interact with attack angle?",
+      "promptTemplate": "Walk me through ball position by club — driver, fairway woods, hybrids, long irons, mid irons, short irons, wedges. Cover standard positions and why they vary. {{skill_level_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "Give me the simple rules I can apply on the range." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "Help me refine my ball positions across the bag." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Include how ball position interacts with attack angle, low point, swing-arc width, and stock shot shape." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick Reference", "promptFragment": "Give me a quick reference table by club." },
+            { "value": "detailed", "label": "Detailed Walkthrough", "promptFragment": "Walk through each club category in detail." },
+            { "value": "diagnostic", "label": "Diagnose Mine", "promptFragment": "Help me figure out if my ball positions are off and how to test it." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stance-width",
+      "title": "Stance Width",
+      "subtitle": "Narrow, wide, and what your shot needs",
+      "iconName": "arrow.left.and.right",
+      "defaultPrompt": "How wide should my stance be for different clubs and shot types? What does too narrow do, what does too wide do, and how do I find the right width for my swing?",
+      "promptTemplate": "Explain stance width by club and shot type — what too narrow does, what too wide does, and how to find the right width. {{skill_level_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "Give me the simple rule and how to test myself." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "Help me refine stance width for different shots." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Include how stance width interacts with hip turn, X-factor, ground force, and stability/speed tradeoffs." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick Answer", "promptFragment": "Give me the rule of thumb and a self-test." },
+            { "value": "detailed", "label": "Detailed Discussion", "promptFragment": "Walk through stance width across the bag." },
+            { "value": "drills", "label": "Drills", "promptFragment": "Give me drills to find my optimal stance widths." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "posture-spine-angle",
+      "title": "Posture & Spine Angle at Address",
+      "subtitle": "Athletic setup that supports a good swing",
+      "iconName": "figure.stand",
+      "defaultPrompt": "Walk me through proper posture at address — spine angle, hip hinge, knee flex, weight distribution. What does athletic setup look like and how do I check mine?",
+      "promptTemplate": "Walk me through posture and spine angle at address — hip hinge, spine tilt, knee flex, weight distribution, arm hang. {{skill_level_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "Keep it simple — what does good posture look like." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "Help me check and refine my posture." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Include S-posture, C-posture, mobility limitations, and how posture affects rotation potential." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick Answer", "promptFragment": "Give me a 4-step setup routine for athletic posture." },
+            { "value": "detailed", "label": "Detailed Walkthrough", "promptFragment": "Walk through every aspect of posture at address." },
+            { "value": "drills", "label": "Drills & Self-Tests", "promptFragment": "Give me drills and tests to verify my posture." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "grip-pressure",
+      "title": "Grip Pressure",
+      "subtitle": "Light or firm — and where it matters",
+      "iconName": "hand.raised.fingers.spread.fill",
+      "defaultPrompt": "How firm should my grip be? Sam Snead said 'hold the bird without crushing it.' What does the modern teaching say, and does pressure change during the swing?",
+      "promptTemplate": "Walk me through grip pressure — how firm to grip, where in the hands pressure matters most, and whether pressure should change during the swing. {{skill_level_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "Keep it simple — how hard should I squeeze." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "Help me refine pressure through the swing." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Include differential pressure between hands, lead vs trail thumb pressure, and how pressure affects clubface and release." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick Answer", "promptFragment": "Give me the simple rule and one drill." },
+            { "value": "detailed", "label": "Detailed Walkthrough", "promptFragment": "Walk through pressure across the swing." },
+            { "value": "drills", "label": "Drills & Feels", "promptFragment": "Give me drills to find and ingrain proper grip pressure." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "grip-strength",
+      "title": "Weak / Neutral / Strong Grip",
+      "subtitle": "How grip rotation affects everything",
+      "iconName": "hand.raised.fill",
+      "defaultPrompt": "Walk me through weak, neutral, and strong grips. How do I tell what mine is, what does each produce in ball flight, and which one fits which player?",
+      "promptTemplate": "Explain weak, neutral, and strong grips — how to identify each (knuckles visible from above), what each produces in ball flight, and which fits which player. {{skill_level_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "Keep it simple — show me how to check and what's standard." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "Help me decide if I should adjust my grip." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Include grip-to-clubface relationship, how grip strength affects release patterns, and tour pro grip data." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick Answer", "promptFragment": "Give me how to check mine and which is right for me." },
+            { "value": "detailed", "label": "Detailed Walkthrough", "promptFragment": "Walk through all three with their pros and cons." },
+            { "value": "diagnostic", "label": "Diagnose My Ball Flight", "promptFragment": "Tell me what my ball flight pattern reveals about my grip." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "aim-alignment-fullswing",
+      "title": "Aim & Alignment",
+      "subtitle": "Most golfers aim wrong — fix it",
+      "iconName": "scope",
+      "defaultPrompt": "Most golfers aim incorrectly. Help me check and fix my alignment — feet, hips, shoulders, and clubface — and develop a reliable pre-shot aiming routine.",
+      "promptTemplate": "Help me check and fix alignment — feet, hips, shoulders, and clubface — plus build a reliable pre-shot aiming routine. {{skill_level_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "Keep it simple — give me a way to check and a way to fix." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "I align with sticks at the range — help me transfer to the course." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Include parallax, eye dominance, lead-eye dominance, and the body-aim vs face-aim debate." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick Answer", "promptFragment": "Give me the highest-leverage alignment check and routine." },
+            { "value": "detailed", "label": "Detailed Walkthrough", "promptFragment": "Walk through alignment thoroughly with checks and drills." },
+            { "value": "routine", "label": "Build a Routine", "promptFragment": "Help me build a complete pre-shot aiming routine." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "preshot-routine",
+      "title": "Building a Pre-Shot Routine",
+      "subtitle": "The same thing every time",
+      "iconName": "list.bullet",
+      "defaultPrompt": "Help me build a pre-shot routine I can use on every shot. What should it include, how long should it take, and how do I make it stick?",
+      "promptTemplate": "Help me build a pre-shot routine — what to include (target picking, visualization, alignment, trigger), timing, and how to ingrain it. {{skill_level_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "I have no routine — start simple and build from there." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "I have an inconsistent routine — help me lock it in." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Include quiet-eye duration, decision/commitment phase separation, and how tour pros structure routines." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Starter Routine", "promptFragment": "Give me a simple 5-step routine I can start using today." },
+            { "value": "detailed", "label": "Build It Up", "promptFragment": "Walk through a complete routine with rationale for each step." },
+            { "value": "pressure", "label": "Pressure-Proof It", "promptFragment": "Focus on building a routine that holds up under pressure." }
+          ]
+        }
+      ]
+    }
+  ]
+}

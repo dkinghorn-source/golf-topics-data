@@ -1,0 +1,271 @@
+{
+  "groupID": "putting",
+  "version": 1,
+  "lastUpdated": "2026-05-01T12:00:00Z",
+  "topics": [
+    {
+      "id": "stroke-mechanics-pendulum-arc",
+      "title": "Pendulum vs Arc Stroke",
+      "subtitle": "The two main stroke shapes and which fits you",
+      "iconName": "arrow.triangle.swap",
+      "defaultPrompt": "Explain the difference between a pendulum (straight-back-straight-through) putting stroke and an arc stroke. Which one fits which putter design and which fits which body type?",
+      "promptTemplate": "Explain the difference between a pendulum (SBST) putting stroke and an arc stroke — mechanics, strengths and weaknesses, and which fits which putter and which body type. {{skill_level_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "Keep it simple — I just want to know which feels more natural and works for me." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "I understand basic putting concepts — go deeper on the mechanics." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Include shaft plane, putter toe hang, lie angle interactions, and how arc magnitude scales with putt length." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick Answer", "promptFragment": "Give me the bottom line — which to use and why." },
+            { "value": "detailed", "label": "Detailed Explanation", "promptFragment": "Walk through both stroke types thoroughly with pros and cons." },
+            { "value": "drills", "label": "Drills & Feels", "promptFragment": "Give me drills and feel cues for finding my natural stroke shape." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "reading-greens",
+      "title": "Reading Greens",
+      "subtitle": "Slope, grain, speed — how to see the line",
+      "iconName": "eye.fill",
+      "defaultPrompt": "Walk me through how to read greens. How do I see slope, what role does grain play, and how do I combine slope and speed to pick a line?",
+      "promptTemplate": "Walk me through how to read greens — seeing slope, evaluating grain, and combining slope with speed to pick a line. {{skill_level_context}} {{focus_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "I can barely see slope — start with the basics of how to look at a green." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "I read basic slope but miss subtle breaks — help me see more." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Include green-speed vs slope tradeoffs, plumb-bobbing, and how to read complex multi-tier breaks." }
+          ]
+        },
+        {
+          "id": "focus_area",
+          "type": "dropdown",
+          "label": "Focus",
+          "templateVariable": "focus_context",
+          "defaultValue": "all",
+          "options": [
+            { "value": "all", "label": "Full Read", "promptFragment": "Cover slope, grain, and speed together." },
+            { "value": "slope", "label": "Slope", "promptFragment": "Focus on seeing slope — how to use feet, eyes, and walking the putt." },
+            { "value": "grain", "label": "Grain", "promptFragment": "Focus on grain — how to spot it, when it matters, and how it affects the line." },
+            { "value": "speed", "label": "Green Speed", "promptFragment": "Focus on green speed — how to feel it on the practice green and adjust on the course." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick Answer", "promptFragment": "Give me a simple routine I can use on every putt." },
+            { "value": "detailed", "label": "Detailed Explanation", "promptFragment": "Walk through a full read process step by step." },
+            { "value": "drills", "label": "Practice Drills", "promptFragment": "Give me practice green drills to sharpen my reading." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lag-putting-distance-control",
+      "title": "Distance Control & Lag Putting",
+      "subtitle": "Speed is king — how to two-putt from anywhere",
+      "iconName": "ruler.fill",
+      "defaultPrompt": "Help me with distance control on long putts. How do I judge speed for 30-50 foot putts so I'm consistently inside three feet for the second putt?",
+      "promptTemplate": "Help me develop distance control on long putts — judging speed for lag putts so I'm consistently inside tap-in range. {{skill_level_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "I have no system for speed — give me something I can start using today." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "I have a rough sense of speed — help me sharpen it." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Include calibration drills, stroke-length-to-distance ratios, and tour-style speed routines." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick Answer", "promptFragment": "Give me one or two highest-leverage adjustments." },
+            { "value": "detailed", "label": "Detailed Explanation", "promptFragment": "Walk me through a complete distance-control system." },
+            { "value": "drills", "label": "Drills & Practice", "promptFragment": "Give me specific drills to build calibrated distance control." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pressure-putts-short",
+      "title": "Pressure Putts (3–6 Feet)",
+      "subtitle": "The putts that determine your score",
+      "iconName": "exclamationmark.circle.fill",
+      "defaultPrompt": "Help me make more pressure putts in the 3-to-6-foot range. What stroke, routine, and mental approach makes these go in more often?",
+      "promptTemplate": "Help me make more 3-to-6-foot pressure putts — stroke, routine, and mental approach. {{skill_level_context}} {{focus_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "I miss a lot of short putts — help me with the basics." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "I make most when relaxed but miss under pressure — help me hold up." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Include face-control mechanics, micro-routines, and quiet-eye research." }
+          ]
+        },
+        {
+          "id": "focus_area",
+          "type": "dropdown",
+          "label": "Focus",
+          "templateVariable": "focus_context",
+          "defaultValue": "all",
+          "options": [
+            { "value": "all", "label": "Mechanics + Mental", "promptFragment": "Cover both the stroke and the mental side together." },
+            { "value": "mechanics", "label": "Stroke Mechanics", "promptFragment": "Focus on what the stroke should look and feel like on short putts." },
+            { "value": "mental", "label": "Mental & Routine", "promptFragment": "Focus on the mental side — routine, breathing, commitment, target." },
+            { "value": "aim", "label": "Aim & Read", "promptFragment": "Focus on aim and reading short putts — how much break to play, how to commit to a line." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick Answer", "promptFragment": "Give me one routine I can use on every short putt." },
+            { "value": "detailed", "label": "Detailed Explanation", "promptFragment": "Walk through the full picture of making more short putts." },
+            { "value": "drills", "label": "Drills", "promptFragment": "Give me specific pressure-simulating drills." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "aim-alignment-putting",
+      "title": "Aim & Alignment",
+      "subtitle": "Most amateurs aim wrong — here's how to fix it",
+      "iconName": "scope",
+      "defaultPrompt": "Most golfers aim their putter incorrectly. Help me check my alignment, learn how to aim accurately, and use my eyes properly over the ball.",
+      "promptTemplate": "Help me with putter aim and alignment — how to check it, how to aim accurately, and how to set my eyes over the ball. {{skill_level_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "I have no idea where I'm aiming — start from scratch." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "I check alignment but suspect I'm still off — help me verify." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Include eye dominance, parallax, putter sightline design, and laser-aim test results." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick Answer", "promptFragment": "Give me a quick test I can do at home and a fix if I'm aiming off." },
+            { "value": "detailed", "label": "Detailed Explanation", "promptFragment": "Walk through alignment, eye position, and aim sequencing in full." },
+            { "value": "drills", "label": "Drills & Tests", "promptFragment": "Give me drills and self-tests to fix and verify my aim." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "aimpoint-express",
+      "title": "AimPoint Express",
+      "subtitle": "Reading break with your feet, fingers, and eyes",
+      "iconName": "hand.point.up.fill",
+      "defaultPrompt": "Walk me through the AimPoint Express method for reading greens. What are the steps, when does it work best, and what are its limitations?",
+      "promptTemplate": "Walk me through the AimPoint Express green-reading method — the feet-fingers-eyes process, when it works best, and its limitations. {{skill_level_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "I've never used AimPoint — explain it from the ground up." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "I've heard of it but never tried it — give me a usable starter version." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Include the percent-slope chart, calibrating fingers to green speed, and edge cases like double breakers." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick Answer", "promptFragment": "Give me the simplest usable version of AimPoint Express." },
+            { "value": "detailed", "label": "Detailed Walkthrough", "promptFragment": "Walk me through the complete process with examples." },
+            { "value": "practice", "label": "How to Practice It", "promptFragment": "Tell me how to practice AimPoint until it's reliable on the course." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "putter-fitting",
+      "title": "Putter Fitting",
+      "subtitle": "Mallet vs blade, length, lie, and toe hang",
+      "iconName": "wrench.fill",
+      "defaultPrompt": "Help me think through putter fitting. What matters most — head shape, length, lie angle, toe hang, weight — and how do I figure out what fits my stroke?",
+      "promptTemplate": "Help me think through putter fitting — head shape (mallet vs blade), length, lie angle, toe hang, and weight. How do I figure out what fits my stroke? {{skill_level_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "Putter fitting is new to me — keep the explanation simple and practical." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "I understand the basics but want help picking the right specs for my stroke." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Include MOI, balance point, face-balanced vs toe-hang interactions with arc, and counter-balanced grip-weight tradeoffs." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick Answer", "promptFragment": "Give me the 3 most important specs to get right." },
+            { "value": "detailed", "label": "Detailed Explanation", "promptFragment": "Walk through each spec and how it interacts with my stroke." },
+            { "value": "diy", "label": "DIY Self-Test", "promptFragment": "Give me self-tests I can do without going to a fitter." }
+          ]
+        }
+      ]
+    }
+  ]
+}

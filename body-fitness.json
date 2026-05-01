@@ -1,0 +1,250 @@
+{
+  "groupID": "body-fitness",
+  "version": 1,
+  "lastUpdated": "2026-05-01T12:00:00Z",
+  "topics": [
+    {
+      "id": "hip-mobility-golf",
+      "title": "Hip Mobility for Golf",
+      "subtitle": "The most important mobility for the swing",
+      "iconName": "figure.walk",
+      "defaultPrompt": "Walk me through hip mobility for golf. Why are hips so important to the swing, what tests can I do at home, and what stretches and exercises actually help?",
+      "promptTemplate": "Walk me through hip mobility for golf — why hips matter so much, self-tests for hip mobility, and the most effective exercises and stretches for golfers. {{skill_level_context}} {{focus_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "I'm new to mobility work — keep it simple and doable." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "I do some mobility work — help me focus it on golf." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Include internal/external rotation deficits, capsular vs muscular limitations, and TPI-style hip assessments." }
+          ]
+        },
+        {
+          "id": "focus_area",
+          "type": "dropdown",
+          "label": "Focus",
+          "templateVariable": "focus_context",
+          "defaultValue": "all",
+          "options": [
+            { "value": "all", "label": "Full Hip Mobility", "promptFragment": "Cover all directions — internal rotation, external rotation, flexion, extension." },
+            { "value": "rotation", "label": "Hip Rotation", "promptFragment": "Focus on internal and external rotation — most directly tied to backswing and follow-through." },
+            { "value": "flexion", "label": "Hip Flexion / Hinge", "promptFragment": "Focus on hip flexion and the ability to hinge at address." },
+            { "value": "extension", "label": "Hip Extension", "promptFragment": "Focus on hip extension — anti-early-extension work." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick Routine", "promptFragment": "Give me a 5-minute daily routine." },
+            { "value": "detailed", "label": "Detailed Plan", "promptFragment": "Walk through tests and exercises thoroughly." },
+            { "value": "weekly", "label": "Weekly Program", "promptFragment": "Build me a weekly hip-mobility program." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "thoracic-spine-rotation",
+      "title": "Thoracic Spine Rotation",
+      "subtitle": "Where your turn actually comes from",
+      "iconName": "figure.flexibility",
+      "defaultPrompt": "Help me with thoracic spine (T-spine) rotation. Most golfers think hip rotation is the limit, but T-spine rotation is often the real bottleneck. Walk me through tests and exercises.",
+      "promptTemplate": "Walk me through thoracic spine rotation for golf — why it's often more limiting than hip mobility, self-tests, and the best exercises and stretches. {{skill_level_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "I've never thought about T-spine — start from scratch." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "Help me focus my mobility work on T-spine." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Include segmental T-spine rotation tests, the seated-rotation test, and the relationship between T-spine and shoulder turn." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick Routine", "promptFragment": "Give me a 5-minute T-spine routine." },
+            { "value": "detailed", "label": "Detailed Plan", "promptFragment": "Walk through tests and exercises thoroughly." },
+            { "value": "diagnostic", "label": "Self-Diagnose", "promptFragment": "Help me self-diagnose if T-spine is my limiting factor." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "warm-up-routine",
+      "title": "Pre-Round Warm-Up",
+      "subtitle": "What to do in the 15 minutes before tee time",
+      "iconName": "flame.fill",
+      "defaultPrompt": "What's the most effective 15-minute warm-up before a round? Mobility, range balls, putting — how do I prioritize and what should it look like?",
+      "promptTemplate": "Walk me through an effective pre-round warm-up — mobility, dynamic prep, range progression, and putting. Designed for time-constrained warm-ups. {{skill_level_context}} {{time_budget_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "Keep it simple — what should I do." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "Help me upgrade my warm-up." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Include post-activation potentiation, dynamic vs static stretching research, and the data on warm-up impact on first-tee performance." }
+          ]
+        },
+        {
+          "id": "time_budget",
+          "type": "dropdown",
+          "label": "Time Available",
+          "templateVariable": "time_budget_context",
+          "defaultValue": "30min",
+          "options": [
+            { "value": "15min", "label": "15 minutes", "promptFragment": "Build the warm-up around 15 minutes." },
+            { "value": "30min", "label": "30 minutes", "promptFragment": "Build the warm-up around 30 minutes." },
+            { "value": "45min", "label": "45 minutes", "promptFragment": "Build the warm-up around 45 minutes." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick Plan", "promptFragment": "Give me the routine as a numbered list." },
+            { "value": "detailed", "label": "Detailed Plan", "promptFragment": "Walk through each phase with timing and rationale." },
+            { "value": "first_tee", "label": "First-Tee Confidence", "promptFragment": "Build the warm-up specifically to feel confident on the first tee." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "strength-training-golfers",
+      "title": "Strength Training for Golfers",
+      "subtitle": "Lifting that translates to clubhead speed",
+      "iconName": "dumbbell.fill",
+      "defaultPrompt": "Walk me through strength training that actually transfers to golf. What lifts matter, how often, and how heavy — without sacrificing mobility or my swing.",
+      "promptTemplate": "Walk me through strength training for golfers — the lifts that matter (rotational power, glute strength, anti-rotation core), frequency, intensity, and how to balance with practice. {{skill_level_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "I've never lifted — give me a beginner program." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "I lift casually — help me focus on golf transfer." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Include rate-of-force development, plyometric programming, and periodization across the season." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick Program", "promptFragment": "Give me a simple 2-day program." },
+            { "value": "detailed", "label": "Detailed Plan", "promptFragment": "Walk through a complete program with progression." },
+            { "value": "weekly", "label": "Weekly Schedule", "promptFragment": "Build me a weekly schedule that integrates lifting with practice and play." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "older-golfer-distance",
+      "title": "Why Older Golfers Lose Distance",
+      "subtitle": "And what to do about it",
+      "iconName": "clock.fill",
+      "defaultPrompt": "Help me understand why distance drops with age — and what I can actually do to fight it. Mobility, strength, sequencing — what's most important?",
+      "promptTemplate": "Walk me through age-related distance loss — what physiologically declines, how it shows up in the swing, and the highest-leverage interventions (mobility, strength, sequence work). {{skill_level_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "Give me practical, doable interventions." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "Walk me through it with specifics." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Include sarcopenia, mobility-decline timelines, and the research on speed training response in older adults." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick Answer", "promptFragment": "Give me the headline plus 3 actions to take." },
+            { "value": "detailed", "label": "Detailed Discussion", "promptFragment": "Walk through causes and interventions thoroughly." },
+            { "value": "plan", "label": "Action Plan", "promptFragment": "Build me a 12-week plan to fight distance loss." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "golf-injuries",
+      "title": "Common Golf Injuries",
+      "subtitle": "Avoiding low back, elbow, and wrist trouble",
+      "iconName": "bandage.fill",
+      "defaultPrompt": "Walk me through the most common golf injuries — low back, lead elbow (golfer's elbow), wrists. What causes them, how do I prevent them, and how do I tell the difference between soreness and something serious?",
+      "promptTemplate": "Walk me through common golf injuries — low back pain, golfer's elbow, wrist issues, and shoulder problems. Causes, prevention, when to rest, and when to see a professional. {{skill_level_context}} {{injury_focus_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "Keep it practical — give me prevention and self-help." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "Walk through prevention and recovery." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Include biomechanics of common injuries, swing patterns that cause them, and rehab progressions." }
+          ]
+        },
+        {
+          "id": "injury_focus",
+          "type": "dropdown",
+          "label": "Focus",
+          "templateVariable": "injury_focus_context",
+          "defaultValue": "all",
+          "options": [
+            { "value": "all", "label": "All Common Injuries", "promptFragment": "Cover the most common golf injuries." },
+            { "value": "low_back", "label": "Low Back", "promptFragment": "Focus on low back pain — the most common golf complaint." },
+            { "value": "elbow", "label": "Elbow (Golfer's Elbow)", "promptFragment": "Focus on golfer's elbow and tennis elbow." },
+            { "value": "wrist", "label": "Wrist", "promptFragment": "Focus on wrist injuries — TFCC, hamate, and grip-related issues." },
+            { "value": "shoulder", "label": "Shoulder", "promptFragment": "Focus on shoulder issues — rotator cuff, AC joint." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick Answer", "promptFragment": "Give me prevention and red-flag signs." },
+            { "value": "detailed", "label": "Detailed Discussion", "promptFragment": "Walk through causes, prevention, and recovery thoroughly." },
+            { "value": "exercises", "label": "Prevention Exercises", "promptFragment": "Give me specific exercises to prevent the injury." }
+          ]
+        }
+      ]
+    }
+  ]
+}

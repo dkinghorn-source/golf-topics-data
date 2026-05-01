@@ -1,0 +1,259 @@
+{
+  "groupID": "course-management",
+  "version": 1,
+  "lastUpdated": "2026-05-01T12:00:00Z",
+  "topics": [
+    {
+      "id": "target-vs-pin",
+      "title": "Target Lines vs Pin Hunting",
+      "subtitle": "Where you should actually aim",
+      "iconName": "scope",
+      "defaultPrompt": "When should I aim at the pin and when should I aim at a safer target? Help me think through target selection on approach shots.",
+      "promptTemplate": "Walk me through target selection on approach shots — when to aim at the pin, when to play to the center of the green, and how to factor in pin position, dispersion, and trouble. {{skill_level_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "Keep it simple — give me a default rule." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "Help me think situationally." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Include expected-value math, dispersion-by-distance, and Scott Fawcett DECADE-style target selection." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick Answer", "promptFragment": "Give me a simple decision rule." },
+            { "value": "detailed", "label": "Decision Framework", "promptFragment": "Walk through a complete decision framework." },
+            { "value": "examples", "label": "Worked Examples", "promptFragment": "Walk through several worked-example shots with the decision logic." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "playing-your-miss",
+      "title": "Playing Your Miss",
+      "subtitle": "Aim to leave the trouble on one side",
+      "iconName": "arrow.left.and.right.righttriangle.left.righttriangle.right",
+      "defaultPrompt": "Help me play my miss — aim in a way that takes one side of the course out of play. How do I figure out my real miss pattern and use it for course management?",
+      "promptTemplate": "Walk me through 'playing your miss' — identifying your true shot pattern, picking targets that take one side out of play, and adjusting strategy to your dominant miss. {{skill_level_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "Keep it practical — how do I figure out my miss and use it." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "Walk me through it with examples." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Include shot-pattern statistics, weighted miss-side analysis, and how to handle two-way miss patterns." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick Answer", "promptFragment": "Give me the simple version I can use this round." },
+            { "value": "detailed", "label": "Detailed Approach", "promptFragment": "Walk through identifying and playing your miss thoroughly." },
+            { "value": "tracking", "label": "How to Track", "promptFragment": "Help me build a system to track and confirm my miss pattern." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "risk-reward-decisions",
+      "title": "Risk-Reward Decisions",
+      "subtitle": "The math of when to take the line and when not to",
+      "iconName": "scalemass.fill",
+      "defaultPrompt": "Help me think through risk-reward on the course. When should I take the aggressive line and when should I lay back? What's the math behind these decisions?",
+      "promptTemplate": "Walk me through risk-reward decision-making — expected value of aggressive vs conservative lines, how to factor in your skill, and the common amateur mistakes. {{skill_level_context}} {{situation_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "Keep it simple — give me default rules I can follow." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "Help me think situationally." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Include expected-strokes math, hero-shot probability, and the decade-style decision framework." }
+          ]
+        },
+        {
+          "id": "situation",
+          "type": "dropdown",
+          "label": "Situation",
+          "templateVariable": "situation_context",
+          "defaultValue": "general",
+          "options": [
+            { "value": "general", "label": "General Question", "promptFragment": "" },
+            { "value": "par5_second", "label": "Par 5 Second Shot", "promptFragment": "Focus on going for par-5 greens in two vs laying up." },
+            { "value": "tee_dogleg", "label": "Tee Shot on a Dogleg", "promptFragment": "Focus on tee-shot decisions on dogleg holes — corner-cutting vs safe line." },
+            { "value": "tucked_pin", "label": "Approach to Tucked Pin", "promptFragment": "Focus on approaches to tucked pins — at the pin or at safe target." },
+            { "value": "trouble_recovery", "label": "Recovery Shot", "promptFragment": "Focus on recovery shots from trouble — punch out vs hero shot." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick Rules", "promptFragment": "Give me the simple decision rules." },
+            { "value": "detailed", "label": "Decision Framework", "promptFragment": "Walk through a complete framework with examples." },
+            { "value": "math", "label": "The Math", "promptFragment": "Include the expected-strokes math behind the decisions." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tee-club-selection",
+      "title": "Picking Tee Clubs Wisely",
+      "subtitle": "Driver isn't always the answer",
+      "iconName": "rectangle.stack.fill",
+      "defaultPrompt": "Help me think through when to hit driver, when to hit 3-wood, when to hit hybrid or iron off the tee. What's the right framework for picking the tee club hole by hole?",
+      "promptTemplate": "Walk me through tee-club selection — when to hit driver, 3-wood, hybrid, or iron off the tee, and the framework for matching club to hole. {{skill_level_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "Keep it simple — give me a default rule." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "Help me build a framework I can apply." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Include landing-zone width vs trouble, distance gain trade-offs, and how strokes-gained analysis informs tee-club choice." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick Framework", "promptFragment": "Give me a simple decision framework." },
+            { "value": "detailed", "label": "Detailed Approach", "promptFragment": "Walk through a complete approach with examples." },
+            { "value": "yardage_book", "label": "Pre-Round Planning", "promptFragment": "Show me how to plan tee clubs hole by hole before a round." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lay-up-decision",
+      "title": "The Lay-Up Decision",
+      "subtitle": "Where to lay up to and why",
+      "iconName": "arrow.down.right.square.fill",
+      "defaultPrompt": "When I decide to lay up, where should I lay up to? Help me figure out the right lay-up distance based on my wedge yardages and where the trouble is.",
+      "promptTemplate": "Walk me through smart lay-up decisions — picking the right lay-up distance based on wedge gaps, comfortable yardages, and trouble layout. {{skill_level_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "Keep it simple — give me a default lay-up rule." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "Help me match lay-up distance to my wedge game." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Include wedge-distance dispersion, full vs partial wedge accuracy, and DECADE-style lay-up logic." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick Rules", "promptFragment": "Give me simple lay-up rules I can use right now." },
+            { "value": "detailed", "label": "Detailed Framework", "promptFragment": "Walk me through a complete lay-up decision framework." },
+            { "value": "yardages", "label": "Map to My Yardages", "promptFragment": "Help me identify my best lay-up distances from my wedge yardages." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tournament-vs-casual",
+      "title": "Tournament vs Casual Strategy",
+      "subtitle": "When to play scared, when to play free",
+      "iconName": "trophy.fill",
+      "defaultPrompt": "How should my course management change between casual rounds, club tournaments, and competitive rounds? Should I play more conservative under pressure or commit harder to my normal patterns?",
+      "promptTemplate": "Walk me through how strategy should shift between casual rounds and competitive rounds — when to dial back, when to commit to your patterns, and how the math actually says to play in tournaments. {{skill_level_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "Keep it practical — what should I actually do differently in a tournament." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "Help me think this through with examples." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Include the cut-line math, position-dependent strategy, and the DECADE/strokes-gained answer to whether tournament play should be more conservative." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick Answer", "promptFragment": "Give me the bottom line." },
+            { "value": "detailed", "label": "Detailed Discussion", "promptFragment": "Walk through how strategy should shift with examples." },
+            { "value": "checklist", "label": "Pre-Round Checklist", "promptFragment": "Give me a pre-tournament-round mental checklist." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yardage-book-usage",
+      "title": "Using a Yardage Book",
+      "subtitle": "How to plan a course before you play it",
+      "iconName": "book.fill",
+      "defaultPrompt": "Walk me through how to use a yardage book or course-planning app effectively. What should I be marking, how do I plan strategy in advance, and how does this help me on the course?",
+      "promptTemplate": "Walk me through using a yardage book or planning app — what to mark, how to plan tee shots and approach targets in advance, and how this changes on-course decision-making. {{skill_level_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "I've never used one — start from scratch." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "I've used basic yardage apps — go deeper on planning." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Include pre-round walking, rep-by-rep target plotting, and how tour caddies build books." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick Answer", "promptFragment": "Give me a simple yardage-book workflow." },
+            { "value": "detailed", "label": "Full System", "promptFragment": "Walk through a complete planning system." },
+            { "value": "tools", "label": "Apps & Tools", "promptFragment": "Include specific apps and physical books I can use." }
+          ]
+        }
+      ]
+    }
+  ]
+}

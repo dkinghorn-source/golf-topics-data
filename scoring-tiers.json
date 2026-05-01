@@ -1,0 +1,211 @@
+{
+  "groupID": "scoring-tiers",
+  "version": 1,
+  "lastUpdated": "2026-05-01T12:00:00Z",
+  "topics": [
+    {
+      "id": "bogey-to-9-handicap",
+      "title": "Bogey Golfer to 9 Handicap",
+      "subtitle": "Crossing into single digits",
+      "iconName": "arrow.up.right",
+      "defaultPrompt": "Help me get from a bogey-golfer score (around 18 handicap) to single digits (9 handicap). What changes most between these two levels and where should I focus?",
+      "promptTemplate": "Walk me through what separates a bogey golfer (around 18 handicap) from a 9 handicap — the data on what changes most, the highest-leverage focus areas, and a realistic timeline. {{skill_level_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "Keep it practical — what should I work on first." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "Walk through it with specifics." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Include strokes-gained category breakdowns by handicap level and the marginal-return curves between levels." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick Answer", "promptFragment": "Give me the top 3 focus areas." },
+            { "value": "detailed", "label": "Detailed Plan", "promptFragment": "Walk through every aspect of the climb." },
+            { "value": "plan", "label": "Build Me a Plan", "promptFragment": "Build me a 6-month plan to drop from bogey golf into single digits." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "9-to-scratch",
+      "title": "9 to Scratch",
+      "subtitle": "Closing the last single-digit gap",
+      "iconName": "trophy.fill",
+      "defaultPrompt": "Help me think through dropping from a 9 handicap to scratch. The mid-single-digit-to-scratch climb is its own thing — what changes most and where should I focus?",
+      "promptTemplate": "Walk me through what separates a 9 handicap from scratch — the data, what improves most, and the highest-leverage focus areas for the climb. {{skill_level_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "Keep it practical — focus areas and a starting point." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "Walk through with specifics." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Include the SG breakdowns at scratch level, what specifically tightens, and how single-day variance differs at this level." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick Answer", "promptFragment": "Give me the top 3 focus areas." },
+            { "value": "detailed", "label": "Detailed Plan", "promptFragment": "Walk through every aspect of the climb." },
+            { "value": "plan", "label": "Build Me a Plan", "promptFragment": "Build me a 12-month plan to climb to scratch." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "par-5-strategy",
+      "title": "Par 5 Strategy",
+      "subtitle": "The biggest scoring opportunities of the round",
+      "iconName": "5.circle.fill",
+      "defaultPrompt": "Help me approach par 5s for maximum scoring. When should I go for it in two, when should I lay up, and how do I avoid the typical bogey-on-a-par-5 disaster?",
+      "promptTemplate": "Walk me through par-5 strategy — go-for-it vs lay-up decisions, smart lay-up distances, and avoiding the bogey-on-par-5 pattern. {{skill_level_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "Keep it simple — what's a default par-5 strategy." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "Help me think situationally about par 5s." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Include the expected-strokes math for go-for-it scenarios and the strokes-gained data on par-5 scoring." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick Answer", "promptFragment": "Give me a simple default strategy." },
+            { "value": "detailed", "label": "Detailed Discussion", "promptFragment": "Walk through par-5 strategy thoroughly." },
+            { "value": "examples", "label": "Worked Examples", "promptFragment": "Walk through several worked-example par-5 scenarios." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "par-3-strategy",
+      "title": "Par 3 Strategy",
+      "subtitle": "Where to aim and what to take",
+      "iconName": "3.circle.fill",
+      "defaultPrompt": "Help me think through par 3 strategy. How do I pick targets, how do I deal with greens guarded by water or bunkers, and how do I avoid the typical par-3 disaster?",
+      "promptTemplate": "Walk me through par-3 strategy — target selection, dealing with hazard-guarded greens, and tee-shot disaster avoidance. {{skill_level_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "Keep it simple — give me a default par-3 strategy." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "Help me think situationally about par 3s." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Include club-up logic, dispersion-based target selection, and how to manage variance." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick Rules", "promptFragment": "Give me the simple par-3 rules." },
+            { "value": "detailed", "label": "Detailed Discussion", "promptFragment": "Walk through par-3 strategy thoroughly." },
+            { "value": "examples", "label": "Worked Examples", "promptFragment": "Walk through several worked-example par-3 scenarios." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "saving-par-from-trouble",
+      "title": "Saving Par From Trouble",
+      "subtitle": "The recovery shot mindset",
+      "iconName": "arrow.uturn.right",
+      "defaultPrompt": "Help me with the recovery mindset — when I'm in trouble, how do I save par instead of compounding the mistake? What does the data say about hero shots vs smart recovery?",
+      "promptTemplate": "Walk me through saving par from trouble — the recovery mindset, the math on hero shots vs smart recovery, and how to limit damage when you're in trouble. {{skill_level_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "Help me make better recovery decisions." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "Help me think through recovery situationally." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Include the expected-strokes math on hero shots, hazard-decision frameworks, and the variance argument." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick Rules", "promptFragment": "Give me the recovery decision rules." },
+            { "value": "detailed", "label": "Detailed Discussion", "promptFragment": "Walk through recovery thinking thoroughly." },
+            { "value": "examples", "label": "Worked Examples", "promptFragment": "Walk through several recovery scenarios with the right decision in each." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "birdie-opportunities",
+      "title": "Birdie Opportunities",
+      "subtitle": "Recognizing and converting",
+      "iconName": "star.fill",
+      "defaultPrompt": "Help me convert more birdie opportunities. When I'm in good position, how do I avoid playing too cautious and actually make the birdie?",
+      "promptTemplate": "Walk me through converting birdie opportunities — recognizing the moments, the right aggression level, and avoiding the over-cautious mistake that turns birdies into pars. {{skill_level_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "Help me see when I have a birdie chance." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "Help me convert more of the chances I see." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Include the make-rate by distance data, aggression vs commitment, and the downside-of-being-overly-cautious math." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick Answer", "promptFragment": "Give me the simple framework for birdie conversion." },
+            { "value": "detailed", "label": "Detailed Discussion", "promptFragment": "Walk through birdie-conversion thinking thoroughly." },
+            { "value": "putts", "label": "Birdie Putt Approach", "promptFragment": "Focus on the putting approach for birdie putts specifically." }
+          ]
+        }
+      ]
+    }
+  ]
+}

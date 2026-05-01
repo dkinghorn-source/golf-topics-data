@@ -1,0 +1,223 @@
+{
+  "groupID": "practice-improvement",
+  "version": 1,
+  "lastUpdated": "2026-05-01T12:00:00Z",
+  "topics": [
+    {
+      "id": "block-vs-random-practice",
+      "title": "Block vs Random Practice",
+      "subtitle": "Why hitting the same shot 50 times feels productive but isn't",
+      "iconName": "shuffle",
+      "defaultPrompt": "Walk me through block versus random practice. Why does block practice feel productive but transfer poorly to the course, and how do I structure random practice that actually helps?",
+      "promptTemplate": "Walk me through block vs random practice — the motor learning research, why block feels productive but transfers poorly, and how to structure effective random practice. {{skill_level_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "I'm new to thinking about practice structure — keep it simple." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "I want to make my practice more effective." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Include the motor learning research, contextual interference, and how to mix block and random for optimal learning." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick Answer", "promptFragment": "Give me the bottom line and one practice structure to start with." },
+            { "value": "detailed", "label": "Detailed Walkthrough", "promptFragment": "Walk through the difference and how to apply it." },
+            { "value": "session_plan", "label": "Sample Session", "promptFragment": "Give me a sample range session that uses both well." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "range-to-course-transfer",
+      "title": "Range-to-Course Transfer",
+      "subtitle": "Why your range game doesn't show up on the course",
+      "iconName": "arrow.right.arrow.left",
+      "defaultPrompt": "I hit it great on the range but it doesn't show up on the course. Why does this happen and how do I structure practice that actually transfers?",
+      "promptTemplate": "Walk me through range-to-course transfer — why range performance often doesn't transfer, the role of consequences and target variability, and how to structure practice for transfer. {{skill_level_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "Keep it practical — give me what to do differently next time I practice." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "Help me redesign my practice for course transfer." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Include specificity of practice research, simulator vs range vs course transfer, and the role of pressure simulation." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick Answer", "promptFragment": "Give me 3 changes I can make to my next range session." },
+            { "value": "detailed", "label": "Full Approach", "promptFragment": "Walk through transfer principles and how to apply them." },
+            { "value": "session_plan", "label": "Transfer Session", "promptFragment": "Build me a range session designed for course transfer." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dispersion-drills",
+      "title": "Dispersion Drills",
+      "subtitle": "Practice that builds tighter shot patterns",
+      "iconName": "scope",
+      "defaultPrompt": "Help me practice in a way that tightens my shot dispersion. What drills and games actually shrink the size of my shot pattern over time?",
+      "promptTemplate": "Walk me through dispersion-focused drills and practice games that shrink shot pattern size — gates, fairway-width games, target shrinking, and tracking. {{skill_level_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "Give me simple, doable drills." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "Give me drills with progression as I improve." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Include statistical dispersion tracking, dispersion-by-club, and how tour players measure and reduce dispersion." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick List", "promptFragment": "Give me 5 dispersion drills in order of effectiveness." },
+            { "value": "detailed", "label": "Detailed Drills", "promptFragment": "Walk through each drill with setup, execution, and progression." },
+            { "value": "tracking", "label": "Tracking System", "promptFragment": "Help me build a system to track dispersion improvement over time." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "eighty-twenty-practice",
+      "title": "The 80/20 of Practice",
+      "subtitle": "Where to spend your time for maximum return",
+      "iconName": "chart.pie.fill",
+      "defaultPrompt": "If I only have 3-4 hours a week to practice, where should I spend it? Walk me through the 80/20 of practice — the small number of focus areas that drive the biggest score improvement.",
+      "promptTemplate": "Walk me through the 80/20 of golf practice — the highest-leverage practice areas given limited time. Tied to strokes-gained data on where amateurs lose strokes. {{skill_level_context}} {{time_budget_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "Keep it simple — what should I focus on as a newer player." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "Help me use my limited practice time wisely." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Include marginal-improvement curves by category and the diminishing returns research." }
+          ]
+        },
+        {
+          "id": "time_budget",
+          "type": "dropdown",
+          "label": "Practice Time",
+          "templateVariable": "time_budget_context",
+          "defaultValue": "moderate",
+          "options": [
+            { "value": "minimal", "label": "1–2 hours / week", "promptFragment": "I have 1-2 hours per week — be ruthless about prioritization." },
+            { "value": "moderate", "label": "3–5 hours / week", "promptFragment": "I have 3-5 hours per week — help me allocate it." },
+            { "value": "serious", "label": "6+ hours / week", "promptFragment": "I have 6+ hours per week — help me build a structured plan." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick Answer", "promptFragment": "Give me the priority list." },
+            { "value": "detailed", "label": "Detailed Plan", "promptFragment": "Walk through the priorities with rationale." },
+            { "value": "schedule", "label": "Weekly Schedule", "promptFragment": "Build me a weekly practice schedule that fits my time budget." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "practice-under-pressure",
+      "title": "Practice Under Pressure",
+      "subtitle": "Simulating the heart-rate moments",
+      "iconName": "heart.fill",
+      "defaultPrompt": "Help me build pressure into my practice. What games and structures simulate the heart-rate moments of competition so I'm prepared when it counts?",
+      "promptTemplate": "Walk me through ways to add pressure to practice — games, consequences, performance metrics, and how to escalate the stakes so practice transfers to competition. {{skill_level_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "Start with simple ways to add pressure." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "Help me ramp up the pressure in my practice." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Include heart rate biofeedback, tournament simulation games, and the research on stress inoculation." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick List", "promptFragment": "Give me 5 pressure games in order of difficulty." },
+            { "value": "detailed", "label": "Detailed Games", "promptFragment": "Walk through pressure games with setup and progression." },
+            { "value": "weekly", "label": "Weekly Integration", "promptFragment": "Show me how to integrate pressure practice into a weekly routine." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tracking-your-practice",
+      "title": "Tracking Your Practice",
+      "subtitle": "What to measure so you actually improve",
+      "iconName": "chart.bar.fill",
+      "defaultPrompt": "How should I track my practice — what metrics matter, how often should I measure, and how do I avoid letting tracking become its own time sink?",
+      "promptTemplate": "Walk me through what to track in practice — the most useful metrics, how often to measure, and how to keep tracking lightweight. {{skill_level_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "Give me a simple starter system." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "Help me build a tracking system I'll actually use." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Include process metrics vs outcome metrics, weighted scoring, and practice-effectiveness measurement." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick Answer", "promptFragment": "Give me the top 3 things to track and how." },
+            { "value": "detailed", "label": "Tracking System", "promptFragment": "Walk through a complete tracking system." },
+            { "value": "tools", "label": "Tools & Apps", "promptFragment": "Include specific tools, spreadsheets, or apps I can use." }
+          ]
+        }
+      ]
+    }
+  ]
+}

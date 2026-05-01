@@ -1,0 +1,259 @@
+{
+  "groupID": "speed-training",
+  "version": 1,
+  "lastUpdated": "2026-05-01T12:00:00Z",
+  "topics": [
+    {
+      "id": "speed-training-fundamentals",
+      "title": "Speed Training Fundamentals",
+      "subtitle": "Why speed is trainable — and how it works",
+      "iconName": "bolt.fill",
+      "defaultPrompt": "Explain the fundamentals of speed training for golf. Why does it work, what's the science behind overspeed protocols, and how much faster can a typical golfer actually get?",
+      "promptTemplate": "Explain the fundamentals of golf speed training — why it works, the science of overspeed and underload protocols, and realistic expectations for speed gains. {{skill_level_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "I've never trained speed — explain it from the ground up." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "I've heard of SuperSpeed and the Stack — go deeper on the why." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Include the neuromuscular adaptation research, motor unit recruitment, and dose-response curves for overspeed training." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick Answer", "promptFragment": "Give me the headline — does it work, why, and how to start." },
+            { "value": "detailed", "label": "Detailed Explanation", "promptFragment": "Walk through the science and the practical application." },
+            { "value": "history", "label": "History & Research", "promptFragment": "Cover the history — Bryson, McIlroy, the SuperSpeed/Stack research lineage." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "why-overspeed-works",
+      "title": "Why Overspeed Works",
+      "subtitle": "The neurological case for swinging lighter clubs",
+      "iconName": "waveform.path.ecg",
+      "defaultPrompt": "Why does swinging a lighter-than-driver club at maximum speed actually make me swing my real driver faster? Walk me through the science of overspeed training.",
+      "promptTemplate": "Explain why overspeed training works — the neurological mechanism, why your nervous system needs to feel speeds it has never felt, and how those gains transfer to real swings. {{skill_level_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "Use simple analogies — I want the concept without jargon." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "I understand the basic concept — go a level deeper." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Include motor unit firing rate, central nervous system speed limits, post-activation potentiation, and the research on transfer from overspeed clubs to real clubs." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick Answer", "promptFragment": "Give me the core concept in a few sentences." },
+            { "value": "detailed", "label": "Detailed Explanation", "promptFragment": "Walk through the science and how it translates to swing speed gains." },
+            { "value": "skeptic", "label": "Address the Skeptics", "promptFragment": "Address the common arguments against overspeed training and what the data actually shows." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stack-system-protocol",
+      "title": "The Stack System Protocol",
+      "subtitle": "Personalized overspeed training",
+      "iconName": "rectangle.stack.fill",
+      "defaultPrompt": "Walk me through the Stack System protocol. How does it personalize the training, what does a typical session look like, and what kinds of speed gains do users typically see?",
+      "promptTemplate": "Walk me through the Stack System protocol — how it personalizes weight selection, what a typical session looks like, the periodization model, and typical speed gains. {{skill_level_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "I've never heard of The Stack — explain it from scratch." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "I know it's a speed training device — explain the protocol." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Include the algorithm-driven prescription, fatigue modeling, deload weeks, and how it differs from SuperSpeed protocol-wise." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick Overview", "promptFragment": "Give me the headline and what to expect." },
+            { "value": "detailed", "label": "Detailed Walkthrough", "promptFragment": "Walk through how to use it session by session." },
+            { "value": "comparison", "label": "Stack vs SuperSpeed", "promptFragment": "Compare it directly to SuperSpeed and help me decide which to choose." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "superspeed-protocol",
+      "title": "SuperSpeed Protocol",
+      "subtitle": "The original three-club overspeed system",
+      "iconName": "speedometer",
+      "defaultPrompt": "Walk me through the SuperSpeed Golf protocol. What are the three clubs for, what's a typical workout look like, and how do I structure a training week?",
+      "promptTemplate": "Walk me through the SuperSpeed Golf protocol — the three-club system (green, blue, red), workout structure, weekly programming, and typical speed gains. {{skill_level_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "I'm new to SuperSpeed — explain from the start." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "Walk me through the protocol with the typical workout." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Include level 1/2/3 progression, recovery between sets, dominant-vs-non-dominant work, and how to calibrate to your speed level." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick Answer", "promptFragment": "Give me a starter workout I can do this week." },
+            { "value": "detailed", "label": "Detailed Walkthrough", "promptFragment": "Walk me through the protocol session by session." },
+            { "value": "schedule", "label": "Weekly Schedule", "promptFragment": "Give me a full weekly schedule with rest days." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "speed-vs-mechanics",
+      "title": "Speed vs Mechanics",
+      "subtitle": "Train speed first, or fix the swing first?",
+      "iconName": "arrow.left.arrow.right",
+      "defaultPrompt": "Should I train for speed first, fix my mechanics first, or work on both at the same time? Help me figure out the right order based on my situation.",
+      "promptTemplate": "Help me decide — should I prioritize speed training, mechanical work, or both at once? Walk through the tradeoffs and what the research and tour coaches recommend. {{skill_level_context}} {{situation_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "Keep it simple and tell me what to do first." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "Walk through the decision and the reasoning." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Include the research on whether speed training compromises mechanics, and the tour coaches' arguments on each side." }
+          ]
+        },
+        {
+          "id": "situation",
+          "type": "dropdown",
+          "label": "My Situation",
+          "templateVariable": "situation_context",
+          "defaultValue": "general",
+          "options": [
+            { "value": "general", "label": "General Question", "promptFragment": "" },
+            { "value": "low_speed", "label": "Low Swing Speed", "promptFragment": "I have low swing speed (under 90 mph driver) and feel like I need more distance." },
+            { "value": "mid_speed", "label": "Average Swing Speed", "promptFragment": "I have average swing speed (90–105 mph driver) and want to add 5+ mph." },
+            { "value": "high_speed_inconsistent", "label": "Fast but Inconsistent", "promptFragment": "I already swing fast (105+ mph) but I'm inconsistent and want to keep speed while tightening up." },
+            { "value": "rebuilding", "label": "Rebuilding My Swing", "promptFragment": "I'm in the middle of a swing change and unsure if speed training fits in." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick Answer", "promptFragment": "Give me the recommendation and a one-line rationale." },
+            { "value": "detailed", "label": "Detailed Discussion", "promptFragment": "Walk through the reasoning and tradeoffs." },
+            { "value": "plan", "label": "Build Me a Plan", "promptFragment": "Give me a specific 4-to-8-week plan that integrates both." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ground-force-speed",
+      "title": "Ground Force for Speed",
+      "subtitle": "Where speed actually comes from",
+      "iconName": "arrow.up.to.line",
+      "defaultPrompt": "Modern instruction talks about ground force as a major source of swing speed. Walk me through what ground force actually is, how tour pros use it, and how I can use it to swing faster.",
+      "promptTemplate": "Explain ground reaction force as a source of swing speed — vertical, horizontal, and rotational forces, how tour pros use them, and how I can develop ground force to add speed. {{skill_level_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "I've never thought about ground force — start simple." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "I know about pressure shift and the lead-leg post — go deeper." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Include vertical/horizontal/rotational GRF components, force plate research, and the timing of peak force application." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick Answer", "promptFragment": "Give me the key concept and one drill to feel it." },
+            { "value": "detailed", "label": "Detailed Explanation", "promptFragment": "Walk through ground force in full." },
+            { "value": "drills", "label": "Drills & Feels", "promptFragment": "Give me drills to develop ground force in my swing." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tracking-speed-over-time",
+      "title": "Tracking Speed Over Time",
+      "subtitle": "Measuring progress and avoiding plateaus",
+      "iconName": "chart.line.uptrend.xyaxis",
+      "defaultPrompt": "How should I track swing speed over time, what gains are realistic over a season, and what does a plateau mean — am I just at my ceiling or do I need to change something?",
+      "promptTemplate": "Help me think about tracking swing speed over time — what to measure, realistic gains over weeks/months/seasons, and how to read a plateau. {{skill_level_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "Keep it practical — just tell me what to track and how." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "I track speed casually — help me track it more usefully." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Include rolling averages, fatigue masking real progress, and how to detect overtraining vs true plateau." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick Answer", "promptFragment": "Give me what to track and how often." },
+            { "value": "detailed", "label": "Detailed Approach", "promptFragment": "Walk through a complete tracking and analysis approach." },
+            { "value": "plateaus", "label": "Breaking Plateaus", "promptFragment": "Focus on diagnosing and breaking through speed plateaus." }
+          ]
+        }
+      ]
+    }
+  ]
+}

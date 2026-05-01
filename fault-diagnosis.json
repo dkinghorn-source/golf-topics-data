@@ -1,0 +1,285 @@
+{
+  "groupID": "fault-diagnosis",
+  "version": 1,
+  "lastUpdated": "2026-05-01T12:00:00Z",
+  "topics": [
+    {
+      "id": "why-i-sliced",
+      "title": "Why Did I Slice That?",
+      "subtitle": "Diagnosing the slice — face, path, or both",
+      "iconName": "arrow.up.right",
+      "defaultPrompt": "Help me diagnose my slice. Walk me through the most common causes — open face at impact, out-to-in path, weak grip — and how to figure out which is mine.",
+      "promptTemplate": "Help me diagnose a slice — the most common causes (open face, out-to-in path, weak grip, early extension) and how to identify which one is mine. {{skill_level_context}} {{shot_pattern_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "Use simple language — I'm new to swing diagnosis." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "I understand path and face concepts — help me diagnose more precisely." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Include path-vs-face ratios, dynamic loft effects, and how to use launch monitor numbers to pinpoint the cause." }
+          ]
+        },
+        {
+          "id": "shot_pattern",
+          "type": "dropdown",
+          "label": "Shot Pattern",
+          "templateVariable": "shot_pattern_context",
+          "defaultValue": "all",
+          "options": [
+            { "value": "all", "label": "All Slices", "promptFragment": "Cover the most common slice patterns and how to tell them apart." },
+            { "value": "starts_left", "label": "Starts Left, Slices Right", "promptFragment": "My ball starts left of target then slices back right — focus on this pattern." },
+            { "value": "starts_straight", "label": "Starts Straight, Curves Right", "promptFragment": "My ball starts on line then peels right — focus on this pattern." },
+            { "value": "starts_right", "label": "Starts Right, Curves More Right", "promptFragment": "My ball starts right of target and curves further right — focus on this pattern." },
+            { "value": "driver_only", "label": "Driver Only", "promptFragment": "I only slice the driver — focus on driver-specific slice causes." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick Diagnosis", "promptFragment": "Give me the most likely cause and the highest-leverage fix." },
+            { "value": "detailed", "label": "Detailed Diagnosis", "promptFragment": "Walk me through diagnosis with self-tests for each potential cause." },
+            { "value": "drills", "label": "Drills to Fix", "promptFragment": "Give me drills that target each potential cause." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "why-i-hooked",
+      "title": "Why Did I Hook That?",
+      "subtitle": "Diagnosing the hook — closed face, in-to-out path",
+      "iconName": "arrow.up.left",
+      "defaultPrompt": "Help me diagnose my hook. What are the common causes — closed face at impact, too-much in-to-out path, strong grip — and how do I figure out which is mine?",
+      "promptTemplate": "Help me diagnose a hook — common causes (closed face, in-to-out path, strong grip, flipping) and how to identify which is mine. {{skill_level_context}} {{shot_pattern_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "Keep it simple — I'm new to diagnosing my own swing." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "I understand basic ball flight — help me pinpoint my specific cause." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Include face-to-path numbers, dynamic loft effects, and how grip and release timing combine to produce hooks." }
+          ]
+        },
+        {
+          "id": "shot_pattern",
+          "type": "dropdown",
+          "label": "Shot Pattern",
+          "templateVariable": "shot_pattern_context",
+          "defaultValue": "all",
+          "options": [
+            { "value": "all", "label": "All Hooks", "promptFragment": "Cover the most common hook patterns and how to tell them apart." },
+            { "value": "starts_right", "label": "Starts Right, Hooks Left", "promptFragment": "My ball starts right of target then hooks back left — focus on this pattern." },
+            { "value": "starts_straight", "label": "Starts Straight, Hooks Left", "promptFragment": "My ball starts on line then peels left — focus on this pattern." },
+            { "value": "snap_hook", "label": "Snap Hook", "promptFragment": "I get a sharp snap hook with minimal carry — focus on this pattern." },
+            { "value": "irons_only", "label": "Irons Only", "promptFragment": "I only hook irons — focus on iron-specific causes." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick Diagnosis", "promptFragment": "Give me the most likely cause and the highest-leverage fix." },
+            { "value": "detailed", "label": "Detailed Diagnosis", "promptFragment": "Walk me through diagnosis with self-tests." },
+            { "value": "drills", "label": "Drills to Fix", "promptFragment": "Give me drills targeting each potential cause." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topping-the-ball",
+      "title": "Topping the Ball",
+      "subtitle": "Why you're hitting it thin or skulling it",
+      "iconName": "arrow.up",
+      "defaultPrompt": "I keep topping the ball or hitting thin shots that skull along the ground. Help me diagnose what's causing it and how to fix it.",
+      "promptTemplate": "Help me diagnose topped and thin shots — the most common causes (early extension, lifting, wrong ball position, over-swinging) and how to fix them. {{skill_level_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "I'm a newer golfer — keep the language simple and focus on the fix." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "I top occasionally — help me identify which fault is mine." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Include low-point control, attack angle, and how spine angle changes through the swing produce thins." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick Fix", "promptFragment": "Give me one or two highest-leverage fixes." },
+            { "value": "detailed", "label": "Full Diagnosis", "promptFragment": "Walk me through every common cause and how to identify which is mine." },
+            { "value": "drills", "label": "Drills", "promptFragment": "Give me drills to fix topping and ground contact." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fat-shots",
+      "title": "Fat Shots",
+      "subtitle": "Hitting it heavy — diagnosis and fix",
+      "iconName": "arrow.down",
+      "defaultPrompt": "I keep hitting it fat — chunking the ball with the club catching the ground first. What causes this and how do I fix it?",
+      "promptTemplate": "Help me diagnose fat shots — common causes (low point too far behind ball, weight stuck on trail side, casting, over-the-top with steep entry) and how to fix them. {{skill_level_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "Keep the language simple — I just want to know why and how to stop." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "I understand low-point concepts — help me identify my specific cause." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Include low-point control mechanics, pressure shift patterns, and how attack angle interacts with steepness." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick Fix", "promptFragment": "Give me one or two fixes to try right now." },
+            { "value": "detailed", "label": "Full Diagnosis", "promptFragment": "Walk me through every cause and how to identify mine." },
+            { "value": "drills", "label": "Drills", "promptFragment": "Give me ground-contact and low-point control drills." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "inconsistent-contact",
+      "title": "Inconsistent Contact",
+      "subtitle": "When some shots are pure and some are awful",
+      "iconName": "questionmark.circle.fill",
+      "defaultPrompt": "My contact is wildly inconsistent — pure one swing, fat or thin or off the toe the next. What causes this kind of inconsistency and how do I tighten it up?",
+      "promptTemplate": "Help me diagnose inconsistent contact — when shots vary widely in quality. Common causes are unstable low point, wandering ball position, sequence breakdown, and grip pressure variation. {{skill_level_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "Keep it simple — I want practical things I can check." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "I have some consistency but want a system for diagnosing the bad swings." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Include dispersion analysis, low-point variability, and which mechanical inconsistencies have the highest variance impact." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick Answer", "promptFragment": "Give me the highest-leverage stability check I can run." },
+            { "value": "detailed", "label": "Full Diagnostic", "promptFragment": "Walk through a complete diagnostic process." },
+            { "value": "practice", "label": "Practice Approach", "promptFragment": "Give me a practice approach that builds consistent contact over time." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sudden-distance-loss",
+      "title": "Sudden Distance Loss",
+      "subtitle": "When yardages drop and you don't know why",
+      "iconName": "arrow.down.right",
+      "defaultPrompt": "My distances have suddenly dropped — every iron is a club shorter than it was. What's the most likely cause and how do I get it back?",
+      "promptTemplate": "Help me diagnose sudden distance loss — common causes (over-the-top with high spin, decel, weak release, lost lag, mobility/strength changes, equipment wear). {{skill_level_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "Keep the diagnosis practical and focused on what I can check or feel." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "I want to systematically rule out causes." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Include spin loft, dynamic loft, smash factor, and angle of attack as diagnostic levers." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick Diagnosis", "promptFragment": "Give me the 3 most common causes and what to check first." },
+            { "value": "detailed", "label": "Full Diagnostic", "promptFragment": "Walk through a thorough diagnostic process." },
+            { "value": "drills", "label": "Drills to Recover", "promptFragment": "Give me drills to recover lost distance once I've identified the cause." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pulls-and-pushes",
+      "title": "Pulls and Pushes",
+      "subtitle": "Straight shots that miss the target",
+      "iconName": "arrow.left.and.right",
+      "defaultPrompt": "I'm hitting straight shots but they miss left or right of the target — pulls and pushes, not curves. What does this tell me about my swing path and clubface?",
+      "promptTemplate": "Help me understand pulls and pushes — straight shots that miss the target left or right. What do these patterns tell me about clubface and path? {{skill_level_context}} {{miss_direction_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "Keep it simple — I want to know why straight shots miss." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "I understand basic ball flight — help me decode pull/push patterns." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Include face-path matching, why straight pulls require matched in-to-out face and path, and how alignment errors masquerade as pulls or pushes." }
+          ]
+        },
+        {
+          "id": "miss_direction",
+          "type": "dropdown",
+          "label": "Direction",
+          "templateVariable": "miss_direction_context",
+          "defaultValue": "all",
+          "options": [
+            { "value": "all", "label": "Both", "promptFragment": "Cover both pulls and pushes." },
+            { "value": "pull", "label": "Pull Only (Left)", "promptFragment": "Focus on pulls — straight shots that miss left." },
+            { "value": "push", "label": "Push Only (Right)", "promptFragment": "Focus on pushes — straight shots that miss right." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick Diagnosis", "promptFragment": "Give me the bottom line on what these misses mean." },
+            { "value": "detailed", "label": "Full Diagnosis", "promptFragment": "Walk through what causes pulls and pushes and how to fix them." },
+            { "value": "drills", "label": "Drills", "promptFragment": "Give me drills to fix pulls and pushes." }
+          ]
+        }
+      ]
+    }
+  ]
+}
