@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "lastUpdated": "2026-05-01T12:00:00Z",
+  "lastUpdated": "2026-05-11T12:00:00Z",
   "groups": [
     {
       "id": "golf-tempo",
@@ -201,6 +201,16 @@
       "topicCount": 6,
       "sortOrder": 19,
       "fileName": "scoring-tiers.json"
+    },
+    {
+      "id": "handicap",
+      "title": "Handicap & Scoring",
+      "subtitle": "Understanding the World Handicap System and your number",
+      "iconName": "number.circle.fill",
+      "color": "gray",
+      "topicCount": 8,
+      "sortOrder": 20,
+      "fileName": "handicap.json"
     }
   ]
 }

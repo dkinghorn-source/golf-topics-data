@@ -1,0 +1,295 @@
+{
+  "groupID": "handicap",
+  "version": 1,
+  "lastUpdated": "2026-05-11T12:00:00Z",
+  "topics": [
+    {
+      "id": "what-is-handicap-index",
+      "title": "What Is a Handicap Index",
+      "subtitle": "Why golf has a portable number for your ability",
+      "iconName": "gauge.with.dots.needle.bottom.50percent",
+      "defaultPrompt": "Explain what a Handicap Index actually measures, why golf invented it, and what it means to say someone is a 'scratch' golfer or a '15 handicap.' What does it predict — and what doesn't it predict?",
+      "promptTemplate": "Explain Handicap Index — what it measures, why golf has one, what the number actually represents, and the difference between a scratch player, a bogey golfer, and a high-handicap golfer. {{skill_level_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "I'm new to golf — explain handicap from scratch." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "I have a handicap already — explain what the number actually means." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Include the statistical interpretation, why scratch is defined the way it is, and how Index relates to expected scoring distributions." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick Answer", "promptFragment": "Give me the concept in plain English in a few sentences." },
+            { "value": "detailed", "label": "Detailed Explanation", "promptFragment": "Walk through the concept with examples at different handicap levels." },
+            { "value": "history", "label": "History & Context", "promptFragment": "Tell me the story of how the handicap system evolved and why the World Handicap System was created in 2020." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "how-handicap-calculated",
+      "title": "How Your Handicap Is Calculated",
+      "subtitle": "Score differentials, 8 of last 20, and the WHS formula",
+      "iconName": "function",
+      "defaultPrompt": "Walk me through how the World Handicap System actually calculates a Handicap Index. How do score differentials work, why does WHS take the best 8 of your last 20 rounds, and what role do the soft cap and hard cap play?",
+      "promptTemplate": "Walk through the WHS Handicap Index calculation — score differential formula, the best 8 of last 20 averaging, the soft cap and hard cap, and how the calculation updates after each new score. {{skill_level_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "I don't know the math yet — start from the basics." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "Show me the formula with a worked example." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Include the soft cap / hard cap thresholds, the playing conditions calculation (PCC), and the exceptional-score reduction." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick Answer", "promptFragment": "Give me the headline of the calculation in a few sentences." },
+            { "value": "detailed", "label": "Detailed Walkthrough", "promptFragment": "Walk through the formula with one worked example end-to-end." },
+            { "value": "worked_example", "label": "Multiple Examples", "promptFragment": "Walk through multiple worked examples at different handicap levels so I see how the formula behaves." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "course-handicap-vs-index",
+      "title": "Course Handicap vs Handicap Index",
+      "subtitle": "Why your number changes at the tee",
+      "iconName": "arrow.left.arrow.right",
+      "defaultPrompt": "Explain the difference between a Handicap Index and a Course Handicap. Why does my 'handicap' look different on every course and from every tee, and how do I figure out the right number to play to in a match or net competition?",
+      "promptTemplate": "Explain the difference between Handicap Index and Course Handicap — how the conversion is done, why it depends on the tee and the course, and how to figure out the correct number to use for a given round or competition. {{skill_level_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "Explain why my handicap looks different in different places — I'm just learning." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "Show me the conversion math with examples from front, middle, and back tees." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Include the playing-handicap allowance for different formats and how net allowances vary by competition type." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick Answer", "promptFragment": "Give me the practical bottom line in a few sentences." },
+            { "value": "detailed", "label": "Detailed Walkthrough", "promptFragment": "Walk through Course Handicap calculation with a worked example." },
+            { "value": "table", "label": "Examples with Tees", "promptFragment": "Give me worked examples at the same course from different tee sets so I see how the Course Handicap moves." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "slope-and-course-rating",
+      "title": "Slope and Course Rating Explained",
+      "subtitle": "The two numbers that grade every course",
+      "iconName": "ruler.fill",
+      "defaultPrompt": "Explain Course Rating and Slope Rating. What do those numbers on the scorecard actually measure, why are there two of them, and how do they get used in handicap calculations?",
+      "promptTemplate": "Explain Course Rating and Slope Rating — what each one measures, why both are needed, the typical ranges, and how they feed into Course Handicap and score differential calculations. {{skill_level_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "I see these numbers on the scorecard but don't really know what they mean — start there." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "Show me the math and how each rating is used." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Include how courses are rated (effective playing length, obstacle factors, the rating team process) and the typical Slope range (55–155, baseline 113)." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick Answer", "promptFragment": "Give me the headline on each rating in a couple of sentences." },
+            { "value": "detailed", "label": "Detailed Explanation", "promptFragment": "Walk through both ratings with worked examples showing the impact on Course Handicap." },
+            { "value": "comparison", "label": "Course Comparison", "promptFragment": "Compare two real-style courses — one easy, one difficult — and show how the ratings reflect the difference." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "home-vs-away",
+      "title": "Home Course vs Away",
+      "subtitle": "Why your home and travel handicap can feel different",
+      "iconName": "airplane",
+      "defaultPrompt": "I tend to score better at my home course than at courses I travel to. Is that normal? How should I think about my handicap traveling vs at home, and what role does slope rating play in evening out home-course advantage?",
+      "promptTemplate": "Explain the home-vs-away handicap question — course familiarity advantage, why slope and rating are designed to normalize this, the expected score variance traveling, and how to interpret a 'travel handicap' vs your home number. {{skill_level_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "I just play my home course — explain why travel feels harder." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "I play a few courses regularly — explain how my Index is supposed to travel with me." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Include research on course-familiarity effects, the typical magnitude of home-course advantage in shots, and how the WHS Slope/Rating system tries to neutralize it." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick Answer", "promptFragment": "Give me the practical bottom line." },
+            { "value": "detailed", "label": "Detailed Explanation", "promptFragment": "Walk through what's going on with both course familiarity and the WHS normalization." },
+            { "value": "strategy", "label": "Strategy for Travel Rounds", "promptFragment": "Give me practical advice for playing a course I've never seen — pre-round prep and on-course decisions that help close the home-course gap." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "natural-variation",
+      "title": "Natural Variation in Your Scores",
+      "subtitle": "What your handicap predicts (and what it doesn't)",
+      "iconName": "waveform.path.ecg",
+      "defaultPrompt": "If I'm a 12 handicap, what scores should I actually expect to shoot? How wide is the normal range of variation, and why do I shoot 78 one day and 95 the next on the same course?",
+      "promptTemplate": "Explain the natural variation in scoring around a Handicap Index — what scores a player at a given handicap actually shoots over a season, the expected distribution, why the WHS takes the best 8 of 20 (which biases toward your good days), and how to read your own variance constructively. {{skill_level_context}} {{handicap_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "Keep the explanation simple — just help me understand why my scores swing so much." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "I understand basic handicap math — show me what the distribution looks like." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Include the statistical research on score variance by handicap level, standard deviation typical ranges, and what Index actually predicts statistically." }
+          ]
+        },
+        {
+          "id": "handicap_band",
+          "type": "dropdown",
+          "label": "My Handicap",
+          "templateVariable": "handicap_context",
+          "defaultValue": "any",
+          "options": [
+            { "value": "any", "label": "Any / Mixed", "promptFragment": "" },
+            { "value": "beginner_25plus", "label": "25+ Handicap", "promptFragment": "Focus on the variation typical at 25+ handicap." },
+            { "value": "high_15_25", "label": "15–25", "promptFragment": "Focus on the variation typical for a 15–25 handicap." },
+            { "value": "mid_8_15", "label": "8–15", "promptFragment": "Focus on the variation typical for an 8–15 handicap." },
+            { "value": "low_0_8", "label": "0–8", "promptFragment": "Focus on the variation typical for a 0–8 handicap." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick Answer", "promptFragment": "Give me the range of scores I should expect, in plain English." },
+            { "value": "detailed", "label": "Detailed Breakdown", "promptFragment": "Walk through the typical distribution and what it means for any one round." },
+            { "value": "mindset", "label": "How to Think About It", "promptFragment": "Help me build a healthier mindset around the inevitable bad rounds and what they do (and don't) say about my real ability." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "getting-official-handicap",
+      "title": "Getting an Official Handicap",
+      "subtitle": "Signing up, posting scores, and what membership gets you",
+      "iconName": "person.crop.circle.badge.checkmark",
+      "defaultPrompt": "Walk me through how to get an official Handicap Index. What service do I sign up with, do I need to be a club member, what does it cost, and how soon does my handicap become valid after I start posting?",
+      "promptTemplate": "Walk through getting an official WHS Handicap Index — which service to sign up with, club-membership requirements, typical cost, how many scores are needed before the handicap is established, and the general process for keeping it active. {{region_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "region",
+          "type": "dropdown",
+          "label": "Region",
+          "templateVariable": "region_context",
+          "defaultValue": "usa",
+          "options": [
+            { "value": "usa", "label": "USA (GHIN)", "promptFragment": "Focus on the USA process — GHIN, USGA, allied golf associations, and typical state-level club membership routes." },
+            { "value": "uk_ireland", "label": "UK & Ireland", "promptFragment": "Focus on England Golf, Scottish Golf, Wales Golf, or Golf Ireland depending on country — what membership and CDH look like." },
+            { "value": "australia", "label": "Australia / NZ", "promptFragment": "Focus on Golf Australia / Golf NZ and the GolfLink system." },
+            { "value": "canada", "label": "Canada", "promptFragment": "Focus on Golf Canada and the Golf Canada Score Centre." },
+            { "value": "other", "label": "Other / General", "promptFragment": "Give the general WHS process without country-specific service detail, and note that the local national federation is the starting point." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick Answer", "promptFragment": "Give me the step-by-step in a few sentences." },
+            { "value": "detailed", "label": "Detailed Walkthrough", "promptFragment": "Walk me through the full process — signup, club affiliation, posting scores, and reaching an established Index." },
+            { "value": "no_club", "label": "I'm Not a Club Member", "promptFragment": "Focus on options for getting a handicap without joining a private or full-membership club — public clubs, online clubs, regional association programs." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "posting-scores",
+      "title": "Posting Scores Correctly",
+      "subtitle": "Net double bogey, away rounds, and exceptional scores",
+      "iconName": "square.and.pencil",
+      "defaultPrompt": "Explain how to post scores for handicap purposes. What's net double bogey adjustment, do I post away rounds the same way, what about a round where I quit on hole 15, and what counts as an 'exceptional score'?",
+      "promptTemplate": "Explain posting scores correctly under WHS — net double bogey adjustment, hole-by-hole vs total-score posting, away rounds, picked-up holes, incomplete rounds, and how exceptional scores trigger the soft cap or reduction. {{skill_level_context}} {{detail_level_context}}",
+      "controls": [
+        {
+          "id": "skill_level",
+          "type": "dropdown",
+          "label": "My Level",
+          "templateVariable": "skill_level_context",
+          "defaultValue": "intermediate",
+          "options": [
+            { "value": "beginner", "label": "Beginner", "promptFragment": "I just got a handicap — walk me through how to post a score from scratch." },
+            { "value": "intermediate", "label": "Intermediate", "promptFragment": "I've posted scores before but want to do it right — include the common adjustments." },
+            { "value": "advanced", "label": "Advanced", "promptFragment": "Include the precise net-double-bogey math, exceptional-score reduction thresholds, and how playing conditions calculation (PCC) interacts with daily score handling." }
+          ]
+        },
+        {
+          "id": "detail_level",
+          "type": "dropdown",
+          "label": "Response Style",
+          "templateVariable": "detail_level_context",
+          "defaultValue": "detailed",
+          "options": [
+            { "value": "quick", "label": "Quick Answer", "promptFragment": "Give me the must-know rules in a few sentences." },
+            { "value": "detailed", "label": "Detailed Walkthrough", "promptFragment": "Walk through each posting situation — full round, incomplete round, picked-up holes, away rounds — with examples." },
+            { "value": "edge_cases", "label": "Edge Cases", "promptFragment": "Focus on the tricky cases — picked-up holes, weather-shortened rounds, casual rounds vs tournament rounds, and what to do if I'm not sure whether to post a score." }
+          ]
+        }
+      ]
+    }
+  ]
+}
