@@ -4,9 +4,9 @@
   "lastUpdated": "2026-05-01T12:00:00Z",
   "topics": [
     {
-      "id": "pre-shot-routine",
-      "title": "Building a Pre-Shot Routine",
-      "subtitle": "Consistent setup for consistent results",
+      "id": "pre-shot-mental-routine",
+      "title": "Building a Pre-Shot Mental Routine",
+      "subtitle": "Mental cues to reset and focus before every shot",
       "iconName": "checklist",
       "defaultPrompt": "Help me build an effective pre-shot routine. I know the pros all have one, but I'm not sure what mine should include or how long it should take.",
       "promptTemplate": "Help me build an effective pre-shot routine that promotes consistency and confidence. {{skill_level_context}} {{shot_type_context}} {{detail_level_context}}",
@@ -18,9 +18,21 @@
           "templateVariable": "skill_level_context",
           "defaultValue": "intermediate",
           "options": [
-            { "value": "beginner", "label": "Beginner", "promptFragment": "I don't have a pre-shot routine yet — help me build one from scratch." },
-            { "value": "intermediate", "label": "Intermediate", "promptFragment": "I have a basic routine but it breaks down under pressure or when I'm playing poorly." },
-            { "value": "advanced", "label": "Advanced", "promptFragment": "I have an established routine but want to refine it for competitive play." }
+            {
+              "value": "beginner",
+              "label": "Beginner",
+              "promptFragment": "I don't have a pre-shot routine yet — help me build one from scratch."
+            },
+            {
+              "value": "intermediate",
+              "label": "Intermediate",
+              "promptFragment": "I have a basic routine but it breaks down under pressure or when I'm playing poorly."
+            },
+            {
+              "value": "advanced",
+              "label": "Advanced",
+              "promptFragment": "I have an established routine but want to refine it for competitive play."
+            }
           ]
         },
         {
@@ -30,10 +42,26 @@
           "templateVariable": "shot_type_context",
           "defaultValue": "full_shots",
           "options": [
-            { "value": "full_shots", "label": "Full Shots", "promptFragment": "Focus on the pre-shot routine for full shots off the tee and fairway." },
-            { "value": "short_game", "label": "Short Game", "promptFragment": "Focus on the pre-shot routine for chips, pitches, and bunker shots." },
-            { "value": "putting", "label": "Putting", "promptFragment": "Focus on the pre-putt routine — read, practice strokes, and commitment." },
-            { "value": "all", "label": "All Shot Types", "promptFragment": "Cover how the routine should adapt for full shots, short game, and putting." }
+            {
+              "value": "full_shots",
+              "label": "Full Shots",
+              "promptFragment": "Focus on the pre-shot routine for full shots off the tee and fairway."
+            },
+            {
+              "value": "short_game",
+              "label": "Short Game",
+              "promptFragment": "Focus on the pre-shot routine for chips, pitches, and bunker shots."
+            },
+            {
+              "value": "putting",
+              "label": "Putting",
+              "promptFragment": "Focus on the pre-putt routine — read, practice strokes, and commitment."
+            },
+            {
+              "value": "all",
+              "label": "All Shot Types",
+              "promptFragment": "Cover how the routine should adapt for full shots, short game, and putting."
+            }
           ]
         },
         {
@@ -43,9 +71,21 @@
           "templateVariable": "detail_level_context",
           "defaultValue": "detailed",
           "options": [
-            { "value": "quick", "label": "Quick Framework", "promptFragment": "Give me a simple framework I can start using next round." },
-            { "value": "detailed", "label": "Detailed Breakdown", "promptFragment": "Break down each element of an effective routine and explain why it matters." },
-            { "value": "examples", "label": "Tour Pro Examples", "promptFragment": "Include examples of what specific tour pros do in their routines and why it works." }
+            {
+              "value": "quick",
+              "label": "Quick Framework",
+              "promptFragment": "Give me a simple framework I can start using next round."
+            },
+            {
+              "value": "detailed",
+              "label": "Detailed Breakdown",
+              "promptFragment": "Break down each element of an effective routine and explain why it matters."
+            },
+            {
+              "value": "examples",
+              "label": "Tour Pro Examples",
+              "promptFragment": "Include examples of what specific tour pros do in their routines and why it works."
+            }
           ]
         }
       ]
@@ -65,9 +105,21 @@
           "templateVariable": "skill_level_context",
           "defaultValue": "intermediate",
           "options": [
-            { "value": "beginner", "label": "Beginner", "promptFragment": "I get nervous on almost every shot, especially with people watching." },
-            { "value": "intermediate", "label": "Intermediate", "promptFragment": "I'm generally OK but tighten up on key shots — first tee, closing holes, short putts." },
-            { "value": "advanced", "label": "Advanced", "promptFragment": "I compete regularly and need tournament-level mental strategies." }
+            {
+              "value": "beginner",
+              "label": "Beginner",
+              "promptFragment": "I get nervous on almost every shot, especially with people watching."
+            },
+            {
+              "value": "intermediate",
+              "label": "Intermediate",
+              "promptFragment": "I'm generally OK but tighten up on key shots — first tee, closing holes, short putts."
+            },
+            {
+              "value": "advanced",
+              "label": "Advanced",
+              "promptFragment": "I compete regularly and need tournament-level mental strategies."
+            }
           ]
         },
         {
@@ -77,10 +129,26 @@
           "templateVariable": "situation_context",
           "defaultValue": "general",
           "options": [
-            { "value": "general", "label": "General Pressure", "promptFragment": "Cover general strategies for managing nerves and pressure." },
-            { "value": "first_tee", "label": "First Tee Jitters", "promptFragment": "Focus specifically on overcoming first tee anxiety." },
-            { "value": "closing", "label": "Closing Out a Round", "promptFragment": "Focus on staying composed when trying to close out a good round or match." },
-            { "value": "recovery", "label": "After a Bad Hole", "promptFragment": "Focus on mental recovery after a blow-up hole — how to reset and not let it snowball." }
+            {
+              "value": "general",
+              "label": "General Pressure",
+              "promptFragment": "Cover general strategies for managing nerves and pressure."
+            },
+            {
+              "value": "first_tee",
+              "label": "First Tee Jitters",
+              "promptFragment": "Focus specifically on overcoming first tee anxiety."
+            },
+            {
+              "value": "closing",
+              "label": "Closing Out a Round",
+              "promptFragment": "Focus on staying composed when trying to close out a good round or match."
+            },
+            {
+              "value": "recovery",
+              "label": "After a Bad Hole",
+              "promptFragment": "Focus on mental recovery after a blow-up hole — how to reset and not let it snowball."
+            }
           ]
         },
         {
@@ -90,9 +158,21 @@
           "templateVariable": "detail_level_context",
           "defaultValue": "detailed",
           "options": [
-            { "value": "quick", "label": "Quick Tips", "promptFragment": "Give me 3-4 techniques I can use immediately on the course." },
-            { "value": "detailed", "label": "Deep Dive", "promptFragment": "Explain the psychology behind pressure and provide a comprehensive toolkit." },
-            { "value": "exercises", "label": "Mental Exercises", "promptFragment": "Include specific breathing exercises, visualization techniques, and mental rehearsal strategies." }
+            {
+              "value": "quick",
+              "label": "Quick Tips",
+              "promptFragment": "Give me 3-4 techniques I can use immediately on the course."
+            },
+            {
+              "value": "detailed",
+              "label": "Deep Dive",
+              "promptFragment": "Explain the psychology behind pressure and provide a comprehensive toolkit."
+            },
+            {
+              "value": "exercises",
+              "label": "Mental Exercises",
+              "promptFragment": "Include specific breathing exercises, visualization techniques, and mental rehearsal strategies."
+            }
           ]
         }
       ]
@@ -112,9 +192,21 @@
           "templateVariable": "skill_level_context",
           "defaultValue": "intermediate",
           "options": [
-            { "value": "beginner", "label": "Beginner", "promptFragment": "I mostly just aim at the flag and hope for the best. Help me think smarter." },
-            { "value": "intermediate", "label": "Intermediate", "promptFragment": "I understand basic strategy but don't have a consistent decision-making framework." },
-            { "value": "advanced", "label": "Advanced", "promptFragment": "I want to think like a caddy — strokes gained approach, miss patterns, and situational strategy." }
+            {
+              "value": "beginner",
+              "label": "Beginner",
+              "promptFragment": "I mostly just aim at the flag and hope for the best. Help me think smarter."
+            },
+            {
+              "value": "intermediate",
+              "label": "Intermediate",
+              "promptFragment": "I understand basic strategy but don't have a consistent decision-making framework."
+            },
+            {
+              "value": "advanced",
+              "label": "Advanced",
+              "promptFragment": "I want to think like a caddy — strokes gained approach, miss patterns, and situational strategy."
+            }
           ]
         },
         {
@@ -124,10 +216,26 @@
           "templateVariable": "course_context",
           "defaultValue": "overall",
           "options": [
-            { "value": "overall", "label": "Overall Strategy", "promptFragment": "Cover a general framework for on-course decision making." },
-            { "value": "tee_shots", "label": "Tee Shot Strategy", "promptFragment": "Focus on tee shot strategy — when to hit driver, when to lay back, and how to pick targets." },
-            { "value": "approach", "label": "Approach Shots", "promptFragment": "Focus on approach shot strategy — which side of the green to miss on, when to be aggressive versus conservative." },
-            { "value": "scoring", "label": "Scoring Zone (< 100 yds)", "promptFragment": "Focus on strategy inside 100 yards — maximizing up-and-down percentage and avoiding big numbers." }
+            {
+              "value": "overall",
+              "label": "Overall Strategy",
+              "promptFragment": "Cover a general framework for on-course decision making."
+            },
+            {
+              "value": "tee_shots",
+              "label": "Tee Shot Strategy",
+              "promptFragment": "Focus on tee shot strategy — when to hit driver, when to lay back, and how to pick targets."
+            },
+            {
+              "value": "approach",
+              "label": "Approach Shots",
+              "promptFragment": "Focus on approach shot strategy — which side of the green to miss on, when to be aggressive versus conservative."
+            },
+            {
+              "value": "scoring",
+              "label": "Scoring Zone (< 100 yds)",
+              "promptFragment": "Focus on strategy inside 100 yards — maximizing up-and-down percentage and avoiding big numbers."
+            }
           ]
         },
         {
@@ -137,9 +245,21 @@
           "templateVariable": "detail_level_context",
           "defaultValue": "detailed",
           "options": [
-            { "value": "quick", "label": "Quick Rules", "promptFragment": "Give me simple rules of thumb for better decision making." },
-            { "value": "detailed", "label": "Full Framework", "promptFragment": "Lay out a complete course management framework with examples." },
-            { "value": "scenarios", "label": "Scenario Walkthroughs", "promptFragment": "Walk me through specific scenarios so I can learn the decision-making process." }
+            {
+              "value": "quick",
+              "label": "Quick Rules",
+              "promptFragment": "Give me simple rules of thumb for better decision making."
+            },
+            {
+              "value": "detailed",
+              "label": "Full Framework",
+              "promptFragment": "Lay out a complete course management framework with examples."
+            },
+            {
+              "value": "scenarios",
+              "label": "Scenario Walkthroughs",
+              "promptFragment": "Walk me through specific scenarios so I can learn the decision-making process."
+            }
           ]
         }
       ]
@@ -159,9 +279,21 @@
           "templateVariable": "skill_level_context",
           "defaultValue": "intermediate",
           "options": [
-            { "value": "beginner", "label": "Beginner", "promptFragment": "I always tighten up on the first tee — give me practical techniques." },
-            { "value": "intermediate", "label": "Intermediate", "promptFragment": "Help me upgrade my first-tee approach." },
-            { "value": "advanced", "label": "Advanced", "promptFragment": "Include arousal-performance research, breathing protocols, and pre-shot focus techniques." }
+            {
+              "value": "beginner",
+              "label": "Beginner",
+              "promptFragment": "I always tighten up on the first tee — give me practical techniques."
+            },
+            {
+              "value": "intermediate",
+              "label": "Intermediate",
+              "promptFragment": "Help me upgrade my first-tee approach."
+            },
+            {
+              "value": "advanced",
+              "label": "Advanced",
+              "promptFragment": "Include arousal-performance research, breathing protocols, and pre-shot focus techniques."
+            }
           ]
         },
         {
@@ -171,9 +303,21 @@
           "templateVariable": "detail_level_context",
           "defaultValue": "detailed",
           "options": [
-            { "value": "quick", "label": "Quick Routine", "promptFragment": "Give me a simple 5-minute first-tee prep routine." },
-            { "value": "detailed", "label": "Full Approach", "promptFragment": "Walk through nerve management thoroughly." },
-            { "value": "tournament", "label": "Tournament First Tee", "promptFragment": "Focus on tournament first-tee scenarios specifically." }
+            {
+              "value": "quick",
+              "label": "Quick Routine",
+              "promptFragment": "Give me a simple 5-minute first-tee prep routine."
+            },
+            {
+              "value": "detailed",
+              "label": "Full Approach",
+              "promptFragment": "Walk through nerve management thoroughly."
+            },
+            {
+              "value": "tournament",
+              "label": "Tournament First Tee",
+              "promptFragment": "Focus on tournament first-tee scenarios specifically."
+            }
           ]
         }
       ]
@@ -193,9 +337,21 @@
           "templateVariable": "skill_level_context",
           "defaultValue": "intermediate",
           "options": [
-            { "value": "beginner", "label": "Beginner", "promptFragment": "Give me a simple reset routine I can use today." },
-            { "value": "intermediate", "label": "Intermediate", "promptFragment": "Help me build a reliable mental reset." },
-            { "value": "advanced", "label": "Advanced", "promptFragment": "Include cognitive reappraisal, emotion regulation research, and the rituals tour pros use." }
+            {
+              "value": "beginner",
+              "label": "Beginner",
+              "promptFragment": "Give me a simple reset routine I can use today."
+            },
+            {
+              "value": "intermediate",
+              "label": "Intermediate",
+              "promptFragment": "Help me build a reliable mental reset."
+            },
+            {
+              "value": "advanced",
+              "label": "Advanced",
+              "promptFragment": "Include cognitive reappraisal, emotion regulation research, and the rituals tour pros use."
+            }
           ]
         },
         {
@@ -205,9 +361,21 @@
           "templateVariable": "detail_level_context",
           "defaultValue": "detailed",
           "options": [
-            { "value": "quick", "label": "Quick Routine", "promptFragment": "Give me a simple post-bad-shot reset." },
-            { "value": "detailed", "label": "Full Approach", "promptFragment": "Walk through mental recovery thoroughly." },
-            { "value": "blow_up", "label": "Avoiding Blow-Up Holes", "promptFragment": "Focus specifically on stopping a blow-up hole from happening." }
+            {
+              "value": "quick",
+              "label": "Quick Routine",
+              "promptFragment": "Give me a simple post-bad-shot reset."
+            },
+            {
+              "value": "detailed",
+              "label": "Full Approach",
+              "promptFragment": "Walk through mental recovery thoroughly."
+            },
+            {
+              "value": "blow_up",
+              "label": "Avoiding Blow-Up Holes",
+              "promptFragment": "Focus specifically on stopping a blow-up hole from happening."
+            }
           ]
         }
       ]
@@ -227,9 +395,21 @@
           "templateVariable": "skill_level_context",
           "defaultValue": "intermediate",
           "options": [
-            { "value": "beginner", "label": "Beginner", "promptFragment": "I'm new to thinking about self-talk — start simple." },
-            { "value": "intermediate", "label": "Intermediate", "promptFragment": "Help me upgrade my internal dialogue." },
-            { "value": "advanced", "label": "Advanced", "promptFragment": "Include the sports psych research on instructional vs motivational self-talk and the second-person self-talk effect." }
+            {
+              "value": "beginner",
+              "label": "Beginner",
+              "promptFragment": "I'm new to thinking about self-talk — start simple."
+            },
+            {
+              "value": "intermediate",
+              "label": "Intermediate",
+              "promptFragment": "Help me upgrade my internal dialogue."
+            },
+            {
+              "value": "advanced",
+              "label": "Advanced",
+              "promptFragment": "Include the sports psych research on instructional vs motivational self-talk and the second-person self-talk effect."
+            }
           ]
         },
         {
@@ -239,9 +419,21 @@
           "templateVariable": "detail_level_context",
           "defaultValue": "detailed",
           "options": [
-            { "value": "quick", "label": "Quick Answer", "promptFragment": "Give me the headline and one practice." },
-            { "value": "detailed", "label": "Detailed Approach", "promptFragment": "Walk through self-talk thoroughly." },
-            { "value": "scripts", "label": "Scripts to Use", "promptFragment": "Give me specific self-talk scripts I can use during a round." }
+            {
+              "value": "quick",
+              "label": "Quick Answer",
+              "promptFragment": "Give me the headline and one practice."
+            },
+            {
+              "value": "detailed",
+              "label": "Detailed Approach",
+              "promptFragment": "Walk through self-talk thoroughly."
+            },
+            {
+              "value": "scripts",
+              "label": "Scripts to Use",
+              "promptFragment": "Give me specific self-talk scripts I can use during a round."
+            }
           ]
         }
       ]
@@ -261,9 +453,21 @@
           "templateVariable": "skill_level_context",
           "defaultValue": "intermediate",
           "options": [
-            { "value": "beginner", "label": "Beginner", "promptFragment": "I've never visualized — start from scratch." },
-            { "value": "intermediate", "label": "Intermediate", "promptFragment": "I visualize sometimes — help me make it consistent and useful." },
-            { "value": "advanced", "label": "Advanced", "promptFragment": "Include the motor-imagery research, internal vs external perspective, and elite-athlete visualization protocols." }
+            {
+              "value": "beginner",
+              "label": "Beginner",
+              "promptFragment": "I've never visualized — start from scratch."
+            },
+            {
+              "value": "intermediate",
+              "label": "Intermediate",
+              "promptFragment": "I visualize sometimes — help me make it consistent and useful."
+            },
+            {
+              "value": "advanced",
+              "label": "Advanced",
+              "promptFragment": "Include the motor-imagery research, internal vs external perspective, and elite-athlete visualization protocols."
+            }
           ]
         },
         {
@@ -273,9 +477,21 @@
           "templateVariable": "detail_level_context",
           "defaultValue": "detailed",
           "options": [
-            { "value": "quick", "label": "Quick Routine", "promptFragment": "Give me a simple visualization step to add to my routine." },
-            { "value": "detailed", "label": "Detailed Approach", "promptFragment": "Walk through visualization thoroughly." },
-            { "value": "off_course", "label": "Off-Course Practice", "promptFragment": "Show me how to practice visualization off the course as a separate skill." }
+            {
+              "value": "quick",
+              "label": "Quick Routine",
+              "promptFragment": "Give me a simple visualization step to add to my routine."
+            },
+            {
+              "value": "detailed",
+              "label": "Detailed Approach",
+              "promptFragment": "Walk through visualization thoroughly."
+            },
+            {
+              "value": "off_course",
+              "label": "Off-Course Practice",
+              "promptFragment": "Show me how to practice visualization off the course as a separate skill."
+            }
           ]
         }
       ]
